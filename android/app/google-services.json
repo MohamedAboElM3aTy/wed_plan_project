@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767096688400",
+    "project_id": "wedplan-application",
+    "storage_bucket": "wedplan-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767096688400:android:4dac0338db2abf1367df95",
+        "android_client_info": {
+          "package_name": "com.example.wed_plan_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767096688400-88lvkuo5h6a109se90flsabeumed5fnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVHT7YtoSiPRU9xsOr5gVOHCYsDtygam4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767096688400-88lvkuo5h6a109se90flsabeumed5fnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
