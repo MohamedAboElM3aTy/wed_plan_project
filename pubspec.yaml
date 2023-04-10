@@ -9,11 +9,12 @@ environment:
   sdk: ">=2.11.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^4.4.0
+  firebase_core: ^2.9.0
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.4
-  firebase_auth: ^4.4.0
   google_fonts: ^4.0.3
 
 dev_dependencies:
@@ -26,7 +27,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-  
+
   fonts:
     - family: OpenSans
       fonts:
