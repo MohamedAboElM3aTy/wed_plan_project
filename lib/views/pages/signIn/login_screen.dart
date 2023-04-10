@@ -9,7 +9,6 @@ class LoginScreen extends StatelessWidget {
       body: Body(),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
       floatingActionButton: FloatingActionButton(
-        elevation: 0,
         foregroundColor: Colors.lightBlue,
         backgroundColor: Colors.purple[50],
         onPressed: Navigator.of(context).pop,
