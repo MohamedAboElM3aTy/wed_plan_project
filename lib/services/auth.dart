@@ -1,24 +1,22 @@
-import 'package:flutter/material.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
-class User {
-  final String uid;
-
-  User({@required this.uid});
+abstract class AuthBase {
+  User get currentUser;
+  Future<User> registerWithEmailAndPassword(String email, String password);
+  Future<User> loginWithEmailAndPassword(String email, String password);
+  Future<void> logout();
 }
 
-class AuthBase {
-  User _userFromFirebase(User user) {
-    return user != null ? User(uid: user.uid) : null;
-  }
+class Auth implements AuthBase {
+  final _firebaseAuth = FirebaseAuth.instance;
 
-  Future<void> registerWithEmailAndPassword(
+  @override
+  Future<User> registerWithEmailAndPassword(
       String email, String password) async {
     try {
-      final authResult = await FirebaseAuth.instance
+      final userAuth = await _firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
-      return authResult.user;
+      return userAuth.user;
     } catch (e) {
       print(
         e.toString(),
@@ -27,11 +25,12 @@ class AuthBase {
     }
   }
 
-  Future<void> loginWithEmailAndPassword(String email, String password) async {
+  @override
+  Future<User> loginWithEmailAndPassword(String email, String password) async {
     try {
-      final authResult = await FirebaseAuth.instance
+      final userAuth = await _firebaseAuth
           .signInWithEmailAndPassword(email: email, password: password);
-      return authResult.user;
+      return userAuth.user;
     } catch (e) {
       print(
         e.toString(),
@@ -40,5 +39,9 @@ class AuthBase {
     }
   }
 
-  Future<void> logout() async => await FirebaseAuth.instance.signOut();
+  @override
+  User get currentUser => _firebaseAuth.currentUser;
+
+  @override
+  Future<void> logout() async => await _firebaseAuth.signOut();
 }

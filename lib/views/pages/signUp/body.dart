@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:wed_plan_project/views/pages/intro_screen.dart';
+
 import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
 import 'package:wed_plan_project/views/pages/signUp/background.dart';
 import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
@@ -23,7 +23,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   final _formKey = GlobalKey<FormState>();
   var _email = '', _passWord = '';
-  AuthBase authBase = AuthBase();
+  AuthBase authBase = Auth();
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class _BodyState extends State<Body> {
                     await authBase.registerWithEmailAndPassword(
                         _email, _passWord);
                     Navigator.of(context)
-                        .pushReplacementNamed(FirstScreen.routeName);
+                        .pushReplacementNamed(IntroScreen.routeName);
                   }
                 },
               ),
@@ -72,8 +72,7 @@ class _BodyState extends State<Body> {
               AlreadyHaveAnAccountCheck(
                 login: false,
                 press: () {
-                  Navigator.push(
-                    context,
+                  Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) {
                         return LoginScreen();

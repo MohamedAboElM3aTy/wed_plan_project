@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 120,
+            top: 140,
             left: 240,
             right: 10,
             child: Padding(

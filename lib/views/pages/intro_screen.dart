@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
-  static const routeName = '/first-screen';
+class IntroScreen extends StatelessWidget {
+  static const routeName = '/intro-screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class FirstScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
-            onPressed: () {},
+            onPressed: () => Navigator.of(context).pop(),
           ),
         ],
       ),
