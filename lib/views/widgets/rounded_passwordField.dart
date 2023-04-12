@@ -5,29 +5,29 @@ import './text_field_container.dart';
 
 class RoundedPasswordField extends StatelessWidget {
   final FormFieldValidator<String> validator;
-  final Function changed;
+  final Function(String) onTap;
 
   const RoundedPasswordField({
-    this.changed,
-    @required this.validator,
-    Key key,
-  }) : super(key: key);
+    required this.onTap,
+    required this.validator,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextFormField(
-        onChanged: changed,
+        onChanged: onTap,
         validator: validator,
         textInputAction: TextInputAction.done,
         obscureText: true,
         decoration: InputDecoration(
           hintText: 'Password',
-          icon: Icon(
+          icon: const Icon(
             Icons.lock,
             color: kPrimaryColor,
           ),
-          suffixIcon: Icon(
+          suffixIcon: const Icon(
             Icons.visibility,
             color: kPrimaryColor,
           ),

@@ -7,15 +7,15 @@ class RoundedInputField extends StatelessWidget {
   final String hintText;
   final IconData icon;
   final FormFieldValidator<String> validator;
-  final Function changed;
+  final Function(String) changed;
 
   const RoundedInputField({
-    this.changed,
-    @required this.validator,
-    this.hintText,
+    required this.changed,
+    required this.validator,
+    required this.hintText,
     this.icon = Icons.person,
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

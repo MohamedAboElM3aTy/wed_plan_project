@@ -4,15 +4,14 @@ import 'package:wed_plan_project/utilities/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
-  final Function press;
+  final VoidCallback? press;
   final Color color, textColor;
   const RoundedButton({
-    this.text,
+    required this.text,
     this.press,
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
-    Key key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,8 @@ class RoundedButton extends StatelessWidget {
               vertical: 20,
               horizontal: 40,
             ), // sets the padding for the button
-            backgroundColor: color, // sets the background color for the button
+            backgroundColor: color, 
+            foregroundColor: kPrimaryLightColor,// sets the background color for the button
           ),
           onPressed: press,
           child: Text(

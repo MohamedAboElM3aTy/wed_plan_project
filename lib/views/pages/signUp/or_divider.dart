@@ -14,7 +14,7 @@ class OrDivider extends StatelessWidget {
           buildDivider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
+            child: const Text(
               'OR',
               style: TextStyle(
                 color: kPrimaryColor,
@@ -30,9 +30,7 @@ class OrDivider extends StatelessWidget {
 }
 
 class buildDivider extends StatelessWidget {
-  const buildDivider({
-    Key key,
-  }) : super(key: key);
+  const buildDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

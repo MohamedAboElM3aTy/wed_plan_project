@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class background extends StatelessWidget {
   final Widget child;
   const background({
-    @required this.child,
-    Key key,
-  }) : super(key: key);
+    required this.child,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

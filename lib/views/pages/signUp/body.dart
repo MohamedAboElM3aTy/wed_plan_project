@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wed_plan_project/views/pages/intro_screen.dart';
 
+import 'package:wed_plan_project/views/pages/intro_screen.dart';
 import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
 import 'package:wed_plan_project/views/pages/signUp/background.dart';
 import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
@@ -35,7 +35,7 @@ class _BodyState extends State<Body> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'SIGN UP',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -49,18 +49,18 @@ class _BodyState extends State<Body> {
               RoundedInputField(
                 changed: (value) => _email = value,
                 validator: (value) =>
-                    value.isEmpty ? 'Enter a valid mail' : null,
+                    value!.isEmpty ? 'Enter a valid mail' : null,
                 hintText: 'Your Email',
               ),
               RoundedPasswordField(
-                changed: (value) => _passWord = value,
+                onTap: (value) => _passWord = value,
                 validator: (value) =>
-                    value.isEmpty ? 'Password Must Contain 8 Letters ' : null,
+                    value!.isEmpty ? 'Password Must Contain 8 Letters ' : null,
               ),
               RoundedButton(
                 text: 'SIGN UP',
                 press: () async {
-                  if (_formKey.currentState.validate()) {
+                  if (_formKey.currentState!.validate()) {
                     await authBase.registerWithEmailAndPassword(
                         _email, _passWord);
                     Navigator.of(context)

@@ -4,12 +4,12 @@ import 'package:wed_plan_project/utilities/constants.dart';
 
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
   final bool login;
-  final Function press;
+  final VoidCallback? press;
   const AlreadyHaveAnAccountCheck({
     this.login = true,
     this.press,
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           onTap: press, 
           child: Text(
             login ? ' Sign Up' : ' Sign In',
-            style: TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor),
+            style: const TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor),
           ),
         )
       ],

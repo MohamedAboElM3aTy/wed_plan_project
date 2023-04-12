@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../widgets/text_icon_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  void nextPage(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/login');
-  }
+  // void nextPage(BuildContext ctx) {
+  //   Navigator.of(ctx).pushNamed('/login');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
+                image: const AssetImage(
                   'assets/images/wedIntro.jpg',
                 ),
                 fit: BoxFit.fitHeight,
@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     'Welcome To wedPlan',
                     style: TextStyle(
                       fontSize: 33,
@@ -51,8 +51,8 @@ class WelcomeScreen extends StatelessWidget {
             bottom: 10,
             left: 220,
             child: AdaptiveButton(
-              press: () => nextPage(context),
               text: 'Get Started',
+              press: () => Navigator.of(context).pushNamed('/login'),
             ),
           ),
         ],

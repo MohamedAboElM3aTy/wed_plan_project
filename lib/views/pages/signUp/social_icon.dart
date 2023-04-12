@@ -5,11 +5,11 @@ import 'package:wed_plan_project/utilities/constants.dart';
 
 class SocialIcon extends StatelessWidget {
   final String iconSource;
-  final Function press;
+  final VoidCallback? press;
   const SocialIcon({
-    this.iconSource,
+    required this.iconSource,
     this.press,
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

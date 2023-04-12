@@ -10,9 +10,7 @@ import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
 import './background.dart';
 
 class Body extends StatefulWidget {
-  const Body({
-    Key key,
-  }) : super(key: key);
+  const Body({super.key});
 
   @override
   State<Body> createState() => _BodyState();
@@ -33,7 +31,7 @@ class _BodyState extends State<Body> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'LOGIN',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),
@@ -46,18 +44,19 @@ class _BodyState extends State<Body> {
               RoundedInputField(
                 changed: (value) => _email = value,
                 validator: (value) =>
-                    value.isEmpty ? 'Enter a valid mail' : null,
+                    value!.isEmpty ? 'Enter a valid mail' : null,
                 hintText: 'Your Email',
               ),
               RoundedPasswordField(
-                changed: (value) => _passWord = value,
-                validator: (value) =>
-                    value.isEmpty ? 'Password Must Contain 8 Letters ' : null,
+                onTap: (value) => _passWord = value,
+                validator: (value) => value!.isEmpty && value.length <= 8
+                    ? 'Password Must Contain 8 Letters '
+                    : null,
               ),
               RoundedButton(
                 text: 'LOGIN',
                 press: () async {
-                  if (_formKey.currentState.validate()) {
+                  if (_formKey.currentState!.validate()) {
                     await authBase.loginWithEmailAndPassword(_email, _passWord);
                     Navigator.of(context)
                         .pushReplacementNamed(IntroScreen.routeName);
