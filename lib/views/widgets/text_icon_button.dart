@@ -5,31 +5,43 @@ class AdaptiveButton extends StatelessWidget {
   final Function press;
 
   AdaptiveButton({
-    @required this.text,
-    @required this.press,
+    required this.text,
+    required this.press,
   });
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 5,
-      borderRadius: BorderRadius.circular(30),
-      color: Colors.purple[100],
+      color: Colors.transparent,
       child: InkWell(
         onTap: () => press(),
         child: Container(
-          padding: EdgeInsets.symmetric(
-            vertical: 10,
-            horizontal: 15,
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            gradient: LinearGradient(
+              colors: [
+                Colors.purple[100]!,
+                Colors.purple[200]!,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          padding: EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: 10,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.arrow_forward_rounded,
                 color: Colors.black,
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Text(
                 text,
                 style: TextStyle(
