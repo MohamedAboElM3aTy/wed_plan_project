@@ -4,6 +4,7 @@ import './constants.dart';
 
 ThemeData buildTheme() {
   return ThemeData(
+    useMaterial3: true,
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -20,8 +21,10 @@ ThemeData buildTheme() {
       fillColor: kPrimaryLightColor,
       iconColor: kPrimaryColor,
       prefixIconColor: kPrimaryColor,
-      contentPadding: EdgeInsets.symmetric(
-          horizontal: defaultPadding, vertical: defaultPadding),
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: defaultPadding,
+        vertical: defaultPadding,
+      ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(30)),
         borderSide: BorderSide.none,
