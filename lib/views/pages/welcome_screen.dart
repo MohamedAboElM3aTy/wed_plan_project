@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import '../widgets/text_icon_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  // void nextPage(BuildContext ctx) {
-  //   Navigator.of(ctx).pushNamed('/login');
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
