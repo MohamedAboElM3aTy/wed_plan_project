@@ -9,13 +9,14 @@ environment:
   sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.4.0
   firebase_core: ^2.9.0
-  flutter:
-    sdk: flutter
   flutter_svg: ^2.0.4
   google_fonts: ^4.0.3
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
