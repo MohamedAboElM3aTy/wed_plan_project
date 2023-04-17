@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'package:wed_plan_project/utilities/theme.dart';
+import 'package:wed_plan_project/utilities/theme_light.dart';
 import 'package:wed_plan_project/views/pages/intro_screen.dart';
 import 'package:wed_plan_project/views/pages/onboarding/onboard_screen.dart';
 import 'package:wed_plan_project/views/pages/welcome_screen.dart';
