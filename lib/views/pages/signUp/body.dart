@@ -9,8 +9,7 @@ import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-
-import '../../../services/auth.dart';
+import 'package:wed_plan_project/services/auth.dart';
 
 class Body extends StatefulWidget {
   final Widget child;
@@ -54,8 +53,9 @@ class _BodyState extends State<Body> {
               ),
               RoundedPasswordField(
                 onTap: (value) => _passWord = value,
-                validator: (value) =>
-                    value!.isEmpty ? 'Password Must Contain 8 Letters ' : null,
+                validator: (value) => value!.isEmpty || value.length < 8
+                    ? 'Password Must Contain 8 Letters '
+                    : null,
               ),
               RoundedButton(
                 text: 'SIGN UP',
