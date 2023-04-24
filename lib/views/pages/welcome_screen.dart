@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wed_plan_project/utilities/routes.dart';
 
 import '../widgets/text_icon_button.dart';
 
@@ -48,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
             left: 220,
             child: AdaptiveButton(
               text: 'Get Started',
-              press: () => Navigator.of(context).pushNamed('/login'),
+              press: () => Navigator.of(context).pushNamed(AppRoutes.onBoardingScreen),
             ),
           ),
         ],

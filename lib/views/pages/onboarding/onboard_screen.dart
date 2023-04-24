@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import './body.dart';
 
-class LoginPage extends StatelessWidget {
-  static const routeName = '/login';
-
+class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

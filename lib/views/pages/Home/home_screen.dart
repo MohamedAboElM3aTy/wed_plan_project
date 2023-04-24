@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class IntroScreen extends StatelessWidget {
-  static const routeName = '/intro-screen';
+class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:wed_plan_project/views/pages/intro_screen.dart';
-import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
+import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/signUp/background.dart';
 import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
 import 'package:wed_plan_project/views/pages/signUp/social_icon.dart';
@@ -58,28 +57,22 @@ class _BodyState extends State<Body> {
                     : null,
               ),
               RoundedButton(
+                color: Theme.of(context).primaryColor,
                 text: 'SIGN UP',
                 press: () async {
                   if (_formKey.currentState!.validate()) {
                     await authBase.registerWithEmailAndPassword(
                         _email, _passWord);
                     Navigator.of(context)
-                        .pushReplacementNamed(IntroScreen.routeName);
+                        .pushReplacementNamed(AppRoutes.homeScreen);
                   }
                 },
               ),
               SizedBox(height: size.height * 0.03),
               AlreadyHaveAnAccountCheck(
                 login: false,
-                press: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
-                    ),
-                  );
-                },
+                press: () =>
+                    Navigator.of(context).pushNamed(AppRoutes.loginPage),
               ),
               OrDivider(),
               Row(

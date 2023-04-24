@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:wed_plan_project/services/auth.dart';
-import 'package:wed_plan_project/views/pages/intro_screen.dart';
-import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
 import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
 import './background.dart';
+
+import 'package:wed_plan_project/utilities/routes.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -54,26 +54,19 @@ class _BodyState extends State<Body> {
                     : null,
               ),
               RoundedButton(
+                color: Theme.of(context).colorScheme.primary,
                 text: 'LOGIN',
                 press: () async {
                   if (_formKey.currentState!.validate()) {
                     await authBase.loginWithEmailAndPassword(_email, _passWord);
                     Navigator.of(context)
-                        .pushReplacementNamed(IntroScreen.routeName);
+                        .pushReplacementNamed(AppRoutes.homeScreen);
                   }
                 },
               ),
               SizedBox(height: size.height * 0.03),
               AlreadyHaveAnAccountCheck(
-                press: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SignUp();
-                      },
-                    ),
-                  );
-                },
+                press: () => Navigator.of(context).pushNamed(AppRoutes.signUpScreen),
               ),
             ],
           ),

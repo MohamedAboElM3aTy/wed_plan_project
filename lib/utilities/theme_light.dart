@@ -6,27 +6,27 @@ import './constants.dart';
 ThemeData buildTheme() {
   return ThemeData(
     textTheme: GoogleFonts.latoTextTheme(),
-    fontFamily: GoogleFonts.workSans().fontFamily,
+    fontFamily: GoogleFonts.lato().fontFamily,
     appBarTheme: const AppBarTheme().copyWith(
         // ! This is the convention for theme of anyThing , The name of widget then copy with
         ),
     useMaterial3: true,
-    primaryColor: kPrimaryColor,
+    primaryColor: kColorScheme.primary,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kColorScheme.primary,
         shape: const StadiumBorder(),
         maximumSize: const Size(double.infinity, 56),
         minimumSize: const Size(double.infinity, 56),
       ),
     ),
-    inputDecorationTheme: const InputDecorationTheme(
+    inputDecorationTheme:  InputDecorationTheme(
       filled: true,
-      fillColor: kPrimaryLightColor,
-      iconColor: kPrimaryColor,
-      prefixIconColor: kPrimaryColor,
+      fillColor: kColorScheme.secondary,
+      iconColor: kColorScheme.primary,
+      prefixIconColor: kColorScheme.primary,
       contentPadding: const EdgeInsets.symmetric(
         horizontal: defaultPadding,
         vertical: defaultPadding,

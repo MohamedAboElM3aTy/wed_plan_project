@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wed_plan_project/utilities/routes.dart';
 
-import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
-import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
-
 import './background.dart';
 
 class Body extends StatelessWidget {
@@ -25,10 +23,11 @@ class Body extends StatelessWidget {
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
-                  color: Colors.cyan[900],
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
                 ),
                 textAlign: TextAlign.center,
                 maxLines: 3,
+                softWrap: true,
               ),
             ),
             SizedBox(height: size.height * 0.03),
@@ -39,29 +38,14 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
+              color: Theme.of(context).primaryColor,
               text: 'LOGIN',
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
+              press: () => Navigator.of(context).pushNamed(AppRoutes.loginPage),
             ),
             RoundedButton(
+              color: Theme.of(context).colorScheme.background,
               text: 'SIGN UP',
-              press: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUp();
-                    },
-                  ),
-                );
-              },
+              press: () => Navigator.of(context).pushNamed(AppRoutes.signUpScreen),
             ),
           ],
         ),
