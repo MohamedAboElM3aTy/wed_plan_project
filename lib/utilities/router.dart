@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wed_plan_project/views/pages/Home/home_screen.dart';
 
-import 'package:wed_plan_project/views/pages/onboarding/body.dart';
 import 'package:wed_plan_project/views/pages/onboarding/onboard_screen.dart';
 import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
 import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
