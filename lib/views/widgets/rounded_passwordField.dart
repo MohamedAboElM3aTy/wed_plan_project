@@ -1,35 +1,50 @@
 import 'package:flutter/material.dart';
-
 import 'package:wed_plan_project/utilities/constants.dart';
 import './text_field_container.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedPasswordField extends StatefulWidget {
   final FormFieldValidator<String> validator;
   final Function(String) onTap;
 
   const RoundedPasswordField({
     required this.onTap,
     required this.validator,
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  _RoundedPasswordFieldState createState() => _RoundedPasswordFieldState();
+}
+
+class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
+  bool _isObscure = true;
+
+  void _toggleObscure() {
+    setState(() {
+      _isObscure = !_isObscure;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextFormField(
-        onChanged: onTap,
-        validator: validator,
+        onChanged: widget.onTap,
+        validator: widget.validator,
         textInputAction: TextInputAction.done,
-        obscureText: true,
+        obscureText: _isObscure,
         decoration: InputDecoration(
           hintText: 'Password',
-          icon: const Icon(
+          icon: Icon(
             Icons.lock,
-            color: kPrimaryColor,
+            color: kColorScheme.primary,
           ),
-          suffixIcon: const Icon(
-            Icons.visibility,
-            color: kPrimaryColor,
+          suffixIcon: IconButton(
+            icon: Icon(
+              _isObscure ? Icons.visibility : Icons.visibility_off,
+              color: kColorScheme.primary,
+            ),
+            onPressed: _toggleObscure,
           ),
           border: InputBorder.none,
         ),
