@@ -5,9 +5,6 @@ import 'package:wed_plan_project/utilities/theme_light.dart';
 import 'package:wed_plan_project/utilities/router.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 
-// ! My app idea is that it will help bridesmaid to organize their wedding through collecting all the information they need in one place.
-// ? They take a lot of time searching on the internet so i decided to collect all their needs in one single platform.
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
