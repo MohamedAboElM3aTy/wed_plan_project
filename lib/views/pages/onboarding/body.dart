@@ -18,15 +18,16 @@ class Body extends StatelessWidget {
               child: Text(
                 'Welcome to our app \n'
                 'The main goal is to serve bridesmaid in their wedding\n'
-                'We will be with you step by step :)',
+                'We will be with you\n'
+                'step by step :)',
                 style: TextStyle(
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                  color: Theme.of(context).primaryColor.withOpacity(0.7),
                 ),
                 textAlign: TextAlign.center,
-                maxLines: 3,
+                maxLines: 4,
                 softWrap: true,
               ),
             ),
