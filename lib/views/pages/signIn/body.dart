@@ -60,7 +60,7 @@ class _BodyState extends State<Body> {
                   if (_formKey.currentState!.validate()) {
                     await authBase.loginWithEmailAndPassword(_email, _passWord);
                     Navigator.of(context)
-                        .pushReplacementNamed(AppRoutes.homeScreen);
+                        .pushReplacementNamed(AppRoutes.categoriesScreen);
                   }
                 },
               ),

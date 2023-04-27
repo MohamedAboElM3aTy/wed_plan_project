@@ -10,7 +10,7 @@ ThemeData buildTheme() {
     appBarTheme: const AppBarTheme().copyWith(
         // ! This is the convention for theme of anyThing , The name of widget then copy with
         ),
-    useMaterial3: true,
+    // useMaterial3: true,
     primaryColor: kColorScheme.primary,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
