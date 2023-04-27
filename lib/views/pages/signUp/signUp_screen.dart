@@ -11,13 +11,13 @@ class SignUp extends StatelessWidget {
           children: [],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
-      floatingActionButton: FloatingActionButton(
-        foregroundColor: Colors.lightBlue,
-        backgroundColor: Colors.purple[50],
-        onPressed: Navigator.of(context).pop,
-        child: Icon(Icons.backspace_outlined),
-      ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
+      // floatingActionButton: FloatingActionButton(
+      //   foregroundColor: Colors.lightBlue,
+      //   backgroundColor: Colors.purple[50],
+      //   onPressed: Navigator.of(context).pop,
+      //   child: Icon(Icons.backspace_outlined),
+      // ),
     );
   }
 }
