@@ -14,10 +14,10 @@ dependencies:
   firebase_core: ^2.9.0
   flutter:
     sdk: flutter
+  flutter_riverpod: ^2.3.6
   flutter_svg: ^2.0.4
   google_fonts: ^4.0.3
   transparent_image: ^2.0.1
-  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -29,17 +29,6 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/images/Images/
-
-  fonts:
-    - family: OpenSans
-      fonts:
-        - asset: assets/fonts/OpenSans-Regular.ttf
-  #       - asset: assets/fonts/-Black.ttf
-  #         weight: 900
-  #       - asset: assets/fonts/-Bold.ttf
-  #         weight: 700
-  #   - family:
   #     fonts:
   #       - asset: assets/fonts/-Regular.ttf
   #       - asset: assets/fonts/-Bold.ttf
