@@ -19,6 +19,7 @@ dependencies:
   google_fonts: ^4.0.3
   transparent_image: ^2.0.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
