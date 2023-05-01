@@ -12,13 +12,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.4.0
   firebase_core: ^2.9.0
+  firebase_storage: ^11.1.1
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.3.6
   flutter_svg: ^2.0.4
   google_fonts: ^4.0.3
+  persistent_bottom_nav_bar_v2: ^4.2.8
   transparent_image: ^2.0.1
-
 
 dev_dependencies:
   flutter_test:
