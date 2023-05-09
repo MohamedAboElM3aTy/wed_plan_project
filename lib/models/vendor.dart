@@ -2,7 +2,6 @@ class Vendor {
   final String name;
   final String id;
   final String category;
-
   final String imageUrl;
   final String businessUrl;
   final String phoneNumber;

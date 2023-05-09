@@ -139,7 +139,7 @@ const availableVendors = [
     name: 'Karim Basyoni',
     id: 'C2',
     category: 'Photographer',
-    imageUrl: 'assets/images/catImages/c2-7.jpeg',
+    imageUrl: 'assets/images/catImages/c2-6.jpeg',
     businessUrl: 'https://www.instagram.com/karim_basyoni_photography/',
     phoneNumber: '01063813840',
   ),
