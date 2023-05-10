@@ -5,4 +5,6 @@ class AppRoutes {
   static const String signUpScreen = '/signUp';
   static const String onBoardingScreen = '/onBoarding';
   static const String vendorsScreen = '/vendors';
+  static const String cartScreen = '/cart';
+  static const String bottomNavBar = '/navBar';
 }
