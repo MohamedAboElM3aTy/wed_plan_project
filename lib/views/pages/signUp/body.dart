@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/signUp/background.dart';
 import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
-import 'package:wed_plan_project/views/pages/signUp/social_icon.dart';
 import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
 import 'package:wed_plan_project/services/auth.dart';
+import 'package:wed_plan_project/views/widgets/build_row.dart';
+import 'package:wed_plan_project/views/widgets/validation.dart';
 
 class Body extends StatefulWidget {
   final Widget child;
@@ -46,25 +47,40 @@ class _BodyState extends State<Body> {
               ),
               RoundedInputField(
                 changed: (value) => _email = value,
-                validator: (value) =>
-                    value!.isEmpty ? 'Enter a valid mail' : null,
+                validator: (value) {
+                  final emailRegex = RegExp(
+                      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+                  if (value!.isEmpty || !emailRegex.hasMatch(value)) {
+                    return 'Enter a valid email';
+                  }
+                  return null;
+                },
                 hintText: 'Your Email',
               ),
               RoundedPasswordField(
                 onTap: (value) => _passWord = value,
-                validator: (value) => value!.isEmpty || value.length < 8
-                    ? 'Password Must Contain 8 Letters '
-                    : null,
+                validator: (value) {
+                  final passwordRegex =
+                      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
+                  if (value!.isEmpty ||
+                      value.length < 8 ||
+                      !passwordRegex.hasMatch(value)) {
+                    return 'Not a valid password';
+                  }
+                  return null;
+                },
               ),
               RoundedButton(
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).primaryColor.withOpacity(0.7),
                 text: 'SIGN UP',
                 press: () async {
                   if (_formKey.currentState!.validate()) {
                     await authBase.registerWithEmailAndPassword(
-                        _email, _passWord);
+                      _email,
+                      _passWord,
+                    );
                     Navigator.of(context)
-                        .pushReplacementNamed(AppRoutes.categoriesScreen);
+                        .pushReplacementNamed(AppRoutes.bottomNavBar);
                   }
                 },
               ),
@@ -75,23 +91,7 @@ class _BodyState extends State<Body> {
                     Navigator.of(context).pushNamed(AppRoutes.loginPage),
               ),
               OrDivider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocialIcon(
-                    iconSource: 'assets/icons/facebook.svg',
-                    press: () {},
-                  ),
-                  SocialIcon(
-                    iconSource: 'assets/icons/google-plus.svg',
-                    press: () {},
-                  ),
-                  SocialIcon(
-                    iconSource: 'assets/icons/twitter.svg',
-                    press: () {},
-                  ),
-                ],
-              ),
+              buildRow(),
             ],
           ),
         ),
