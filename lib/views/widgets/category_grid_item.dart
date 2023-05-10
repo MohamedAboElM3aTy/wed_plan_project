@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import 'package:wed_plan_project/models/category.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
 
 class CategoryGridItem extends StatelessWidget {
   const CategoryGridItem({
     super.key,
     required this.category,
-    // required this.onTap,
+    required this.onTap,
   });
 
   final Category category;
-  // final void Function() onTap;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,21 +23,15 @@ class CategoryGridItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       elevation: 4,
       child: InkWell(
-        // ? I make the navigation from here
-        onTap: () => Navigator.of(context).pushNamed(
-          AppRoutes.vendorsScreen,
-        ),
+        onTap: onTap,
         child: Stack(
           children: [
-            Hero(
-              tag: category.id,
-              child: FadeInImage(
-                placeholder: MemoryImage(kTransparentImage),
-                image: AssetImage(category.imageUrl),
-                fit: BoxFit.cover,
-                height: 200,
-                width: double.infinity,
-              ),
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: AssetImage(category.imageUrl),
+              fit: BoxFit.cover,
+              height: 200,
+              width: double.infinity,
             ),
             Positioned(
               bottom: 0,
