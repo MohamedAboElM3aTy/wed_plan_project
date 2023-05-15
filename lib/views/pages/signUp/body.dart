@@ -8,8 +8,7 @@ import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
 import 'package:wed_plan_project/services/auth.dart';
-import 'package:wed_plan_project/views/widgets/build_row.dart';
-import 'package:wed_plan_project/views/widgets/validation.dart';
+import 'package:wed_plan_project/views/pages/signUp/build_row.dart';
 
 class Body extends StatefulWidget {
   final Widget child;

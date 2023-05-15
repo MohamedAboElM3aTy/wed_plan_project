@@ -5,9 +5,8 @@ import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-import './background.dart';
-
 import 'package:wed_plan_project/utilities/routes.dart';
+import './background.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
