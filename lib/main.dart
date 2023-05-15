@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:wed_plan_project/utilities/dark_theme.dart';
 
 import 'package:wed_plan_project/utilities/theme_light.dart';
 import 'package:wed_plan_project/utilities/router.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'WedPlan',
-      theme: buildTheme(),
+      // theme: buildTheme(),
+      theme: buildDarkTheme(),
       initialRoute: AppRoutes.welcomeScreen,
       onGenerateRoute: generateRoute,
     );
