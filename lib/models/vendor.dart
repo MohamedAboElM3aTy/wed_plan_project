@@ -1,4 +1,6 @@
-class Vendor {
+import 'package:equatable/equatable.dart';
+
+class Vendor extends Equatable {
   final String name;
   final String id;
   final String category;
@@ -14,4 +16,14 @@ class Vendor {
     required this.businessUrl,
     required this.phoneNumber,
   });
+  
+  @override
+  List<Object?> get props => [
+        name,
+        id,
+        category,
+        imageUrl,
+        businessUrl,
+        phoneNumber,
+  ];
 }
