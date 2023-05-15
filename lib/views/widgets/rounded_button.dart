@@ -26,9 +26,9 @@ class RoundedButton extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               vertical: 20,
               horizontal: 40,
-            ), // sets the padding for the button
-            backgroundColor: kColorScheme.primary, 
-            foregroundColor: kColorScheme.secondary,// sets the background color for the button
+            ),
+            backgroundColor: color,
+            foregroundColor: kColorScheme.primary,
           ),
           onPressed: press,
           child: Text(

@@ -5,12 +5,10 @@ import './constants.dart';
 
 ThemeData buildTheme() {
   return ThemeData(
+    // useMaterial3: true,
     textTheme: GoogleFonts.latoTextTheme(),
     fontFamily: GoogleFonts.lato().fontFamily,
-    appBarTheme: const AppBarTheme().copyWith(
-        // ! This is the convention for theme of anyThing , The name of widget then copy with
-        ),
-    // useMaterial3: true,
+    appBarTheme: const AppBarTheme().copyWith(),
     primaryColor: kColorScheme.primary,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -22,7 +20,7 @@ ThemeData buildTheme() {
         minimumSize: const Size(double.infinity, 56),
       ),
     ),
-    inputDecorationTheme:  InputDecorationTheme(
+    inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: kColorScheme.secondary,
       iconColor: kColorScheme.primary,

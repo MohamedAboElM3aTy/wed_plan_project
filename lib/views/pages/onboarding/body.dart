@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
 
+import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import './background.dart';
 
@@ -17,17 +17,18 @@ class Body extends StatelessWidget {
             FittedBox(
               child: Text(
                 'Welcome to our app \n'
-                'The main goal is to serve bridesmaid in their wedding\n'
+                'The main goal is to serve\n'
+                'bridesmaid in their wedding\n'
                 'We will be with you\n'
                 'step by step :)',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 22,
                   fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                   color: Theme.of(context).primaryColor.withOpacity(0.7),
                 ),
                 textAlign: TextAlign.center,
-                maxLines: 4,
+                maxLines: 5,
                 softWrap: true,
               ),
             ),
@@ -44,9 +45,10 @@ class Body extends StatelessWidget {
               press: () => Navigator.of(context).pushNamed(AppRoutes.loginPage),
             ),
             RoundedButton(
-              color: Theme.of(context).colorScheme.background,
+              color: Theme.of(context).primaryColor.withOpacity(0.7),
               text: 'SIGN UP',
-              press: () => Navigator.of(context).pushNamed(AppRoutes.signUpScreen),
+              press: () =>
+                  Navigator.of(context).pushNamed(AppRoutes.signUpScreen),
             ),
           ],
         ),
