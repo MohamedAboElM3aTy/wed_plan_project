@@ -9,8 +9,11 @@ class VendorItem extends StatelessWidget {
   const VendorItem({
     super.key,
     required this.vendor,
+    required this.onTap,
   });
+
   final Vendor vendor;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +25,14 @@ class VendorItem extends StatelessWidget {
       ),
       clipBehavior: Clip.hardEdge,
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Stack(
           children: [
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: AssetImage(vendor.imageUrl),
+              image: AssetImage(
+                vendor.imageUrl,
+              ),
               fit: BoxFit.fill,
               height: 200,
               width: double.infinity,
