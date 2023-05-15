@@ -20,11 +20,12 @@ class SocialIcon extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-            border: Border.all(
-              width: 2,
-              color: kColorScheme.background,
-            ),
-            shape: BoxShape.circle),
+          border: Border.all(
+            width: 2,
+            color: kColorScheme.background,
+          ),
+          shape: BoxShape.circle,
+        ),
         child: SvgPicture.asset(
           iconSource,
           height: 20,
