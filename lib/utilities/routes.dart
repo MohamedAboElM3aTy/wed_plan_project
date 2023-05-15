@@ -7,4 +7,6 @@ class AppRoutes {
   static const String vendorsScreen = '/vendors';
   static const String cartScreen = '/cart';
   static const String bottomNavBar = '/navBar';
+  static const String vendorDetails = '/vendorDetails';
+  static const String searchPage = '/searchPage';
 }

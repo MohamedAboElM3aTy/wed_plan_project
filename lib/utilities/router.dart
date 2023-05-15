@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:wed_plan_project/views/pages/Home/search_page.dart';
 
-import 'package:wed_plan_project/models/vendor.dart';
+import 'package:wed_plan_project/views/pages/Home/vendor_details.dart';
 import 'package:wed_plan_project/views/pages/Home/vendors_screen.dart';
-
 import 'package:wed_plan_project/views/pages/Home/Categories_screen.dart';
-import 'package:wed_plan_project/views/pages/bottom_navbar_screen.dart';
+import 'package:wed_plan_project/views/Layouts/bottom_navbar_screen.dart';
 import 'package:wed_plan_project/views/pages/cart/cart.dart';
 import 'package:wed_plan_project/views/pages/onboarding/onboard_screen.dart';
 import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
 import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
 import 'package:wed_plan_project/views/pages/welcome_screen.dart';
-import './routes.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
+import './routes.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -42,12 +42,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (_) => OnBoardingScreen(),
         settings: settings,
       );
-      //! This is the route for the vendors screen but doesn't work 
-      //? because i want to pass the data from the categories screen to the vendors screen
-    // case AppRoutes.vendorsScreen:
-    //   return MaterialPageRoute(
-    //     builder: (_) => VendorsScreen(),
-    //   );
+    case AppRoutes.vendorsScreen:
+      final args = settings.arguments as Map<String, dynamic>;
+      return MaterialPageRoute(
+        builder: (_) => VendorsScreen(
+          vendors: args['vendors'],
+          title: args['title'],
+        ),
+      );
     case AppRoutes.cartScreen:
       return MaterialPageRoute(
         builder: (_) => CartScreen(),
@@ -56,6 +58,19 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case AppRoutes.bottomNavBar:
       return MaterialPageRoute(
         builder: (_) => BottomNavbar(),
+        settings: settings,
+      );
+    case AppRoutes.vendorDetails:
+      final args = settings.arguments as Map<String, dynamic>;
+      return MaterialPageRoute(
+        builder: (_) => VendorsDetails(
+          vendor: args['vendor'],
+        ),
+        settings: settings,
+      );
+    case AppRoutes.searchPage:
+      return MaterialPageRoute(
+        builder: (_) => SearchPage(),
         settings: settings,
       );
     default:
