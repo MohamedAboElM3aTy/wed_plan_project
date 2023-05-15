@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wed_plan_project/views/widgets/main_drawer.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -7,13 +6,10 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        title: const Text('Cart'),
-      ),
-      drawer: MainDrawer(),
       body: Center(
-        child: Text('Cart Items'),
+        child: Text(
+          'The added Services from vendors will be displayed here.',
+        ),
       ),
     );
   }
