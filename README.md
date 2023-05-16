@@ -1,4 +1,4 @@
-### WedPlan cash
+### Wed-Plan 
 
 This is my Graduation Project :) 
 
