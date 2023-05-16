@@ -40,16 +40,16 @@ class AdaptiveButton extends StatelessWidget {
               const Icon(
                 Icons.arrow_forward_rounded,
                 color: Colors.black,
+                size: 26,
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 6),
               Text(
                 text,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 20,
-                ),
+                style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                    ),
               ),
             ],
           ),

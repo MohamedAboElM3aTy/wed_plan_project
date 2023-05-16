@@ -45,11 +45,12 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
-            left: 220,
+            bottom: 20,
+            left: 250,
             child: AdaptiveButton(
               text: 'Get Started',
-              press: () => Navigator.of(context).pushNamed(AppRoutes.onBoardingScreen),
+              press: () =>
+                  Navigator.of(context).pushNamed(AppRoutes.onBoardingScreen),
             ),
           ),
         ],
