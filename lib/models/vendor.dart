@@ -7,6 +7,7 @@ class Vendor extends Equatable {
   final String imageUrl;
   final String businessUrl;
   final String phoneNumber;
+  final double rating; 
 
   const Vendor({
     required this.name,
@@ -15,6 +16,7 @@ class Vendor extends Equatable {
     required this.imageUrl,
     required this.businessUrl,
     required this.phoneNumber,
+    required this.rating
   });
   
   @override
@@ -25,5 +27,6 @@ class Vendor extends Equatable {
         imageUrl,
         businessUrl,
         phoneNumber,
+        rating,
   ];
 }
