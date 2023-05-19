@@ -4,9 +4,11 @@ import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:wed_plan_project/utilities/constants.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/Home/Categories_screen.dart';
+import 'package:wed_plan_project/views/pages/Home/favorites.dart';
 import 'package:wed_plan_project/views/pages/cart/cart.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/views/Layouts/main_drawer.dart';
+import 'package:wed_plan_project/views/pages/checkout/checkout.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -21,7 +23,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
   List<Widget> _buildScreens() {
     return [
       CategoriesScreen(availableVendors: availableVendors),
-      const CartScreen(),
+      FavoritesPage(vendors: availableVendors),
+      CartScreen(),
+      CheckoutPage(),
     ];
   }
 
@@ -47,7 +51,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
       case 0:
         return 'Categories';
       case 1:
+        return 'Favorites';
+      case 2:
         return 'Cart';
+      case 3:
+        return 'Checkout';
       default:
         return 'Categories';
     }
@@ -62,8 +70,20 @@ class _BottomNavbarState extends State<BottomNavbar> {
         inactiveColorPrimary: Colors.grey[400],
       ),
       PersistentBottomNavBarItem(
+        icon: Icon(Icons.star),
+        title: ('Favorites'),
+        activeColorPrimary: Theme.of(context).primaryColor,
+        inactiveColorPrimary: Colors.grey[400],
+      ),
+      PersistentBottomNavBarItem(
         icon: Icon(Icons.shopping_cart),
         title: ('Cart'),
+        activeColorPrimary: Theme.of(context).primaryColor,
+        inactiveColorPrimary: Colors.grey[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.shopping_cart_checkout),
+        title: ('Checkout'),
         activeColorPrimary: Theme.of(context).primaryColor,
         inactiveColorPrimary: Colors.grey[400],
       ),

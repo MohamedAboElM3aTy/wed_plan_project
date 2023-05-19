@@ -92,11 +92,29 @@ class _MainDrawerState extends State<MainDrawer> {
                 ),
                 Divider(),
                 BuildListTile(
-                  icon: Icons.shop_2_outlined,
-                  titleText: 'Cart',
+                  icon: Icons.favorite_outline,
+                  titleText: 'Favorites',
                   onTap: () {
                     Navigator.pop(context);
                     widget.controller.jumpToTab(1);
+                  },
+                ),
+                Divider(),
+                BuildListTile(
+                  icon: Icons.shopping_cart,
+                  titleText: 'Cart',
+                  onTap: () {
+                    Navigator.pop(context);
+                    widget.controller.jumpToTab(2);
+                  },
+                ),
+                Divider(),
+                BuildListTile(
+                  icon: Icons.shopping_bag_outlined,
+                  titleText: 'Check-out',
+                  onTap: () {
+                    Navigator.pop(context);
+                    widget.controller.jumpToTab(3);
                   },
                 ),
                 Divider(),
