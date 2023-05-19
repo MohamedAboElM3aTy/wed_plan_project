@@ -29,13 +29,13 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const Text(
-                    'Welcome To wedPlan',
+                   Text(
+                    'Welcome To Bridely',
                     style: TextStyle(
                       fontSize: 33,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black54,
+                      color: Colors.black.withOpacity(0.7),
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 3,
