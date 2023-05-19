@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:wed_plan_project/utilities/dark_theme.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:wed_plan_project/utilities/theme_light.dart';
 import 'package:wed_plan_project/utilities/router.dart';
@@ -10,7 +10,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
-    MyApp(),
+    ProviderScope(
+      child: MyApp(),
+    ),
   );
 }
 
@@ -20,10 +22,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'WedPlan',
-      // theme: buildTheme(),
-      theme: buildDarkTheme(),
+      theme: buildTheme(),
       initialRoute: AppRoutes.welcomeScreen,
       onGenerateRoute: generateRoute,
     );
   }
 }
+
+// import 'package:wed_plan_project/utilities/dark_theme.dart';
+// theme: buildDarkTheme(),
