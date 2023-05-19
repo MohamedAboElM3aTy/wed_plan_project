@@ -64,7 +64,14 @@ class _BodyState extends State<Body> {
                   if (value!.isEmpty ||
                       value.length < 8 ||
                       !passwordRegex.hasMatch(value)) {
-                    return 'Not a valid password';
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                            'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number'),
+                      ),
+                    );
+                    return 'Can\'t be empty';
+                    // 'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number';
                   }
                   return null;
                 },
