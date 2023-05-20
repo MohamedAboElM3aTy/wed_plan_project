@@ -14,17 +14,23 @@
 
 ##
 
-## The Main Features of App 🧑🏻‍💻
+## Features :dart:
+* [ ] Free & Open Source
+* [x] Very Easy to use
+* [x] Cross Platform App (Android - IOS)
+* [x] Amazing UI 
+* [x] Simple Animation
+* [x] Validation
+* [x] Firebase Authentication (Login, Register & Logout)
+* [x] Email & Password(Sign-in & sign-up method)
+* [x] Hive (Local Data base)
+* [x] Search feature
+* [x] URL package.
+* [x] Bloc (State Mangement)
 
-### 1-	 Firebase integration with the app allow the user to Register to My App, sign in back again any time. 
-### 2-	Hive integration to store the data locally and cached it to make the process of favorites and cart is smoother to the user.
-### 3-	Bloc & cubit as state management.
-### 4-	Implement Search Feature to search for vendors.
-### 5-	Used Navigation Bar to allow the user to navigate between Screens.
-### 6-	URL package to allow the user to see the vendors work on Instagram.
-### 7-	Used Animation to make the UI looks more beauty.
-### 8-	Possibility of mark the vendor as favorite or not or adding or remove from cart before checkout.
+## Language & Framework
+* Dart
+* Flutter
 
-##
 
 ## ScreenShots 📸 
