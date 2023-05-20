@@ -20,7 +20,6 @@ class MainDrawer extends StatefulWidget {
 
 class _MainDrawerState extends State<MainDrawer> {
   final Auth auth = Auth();
-  ThemeMode currentThemeMode = ThemeMode.system;
 
   @override
   Widget build(BuildContext context) {
@@ -68,20 +67,6 @@ class _MainDrawerState extends State<MainDrawer> {
           Expanded(
             child: Column(
               children: [
-                BuildListTile(
-                  icon: Icons.dark_mode,
-                  titleText: 'Dark Mode',
-                  onTap: () {
-                    setState(
-                      () {
-                        currentThemeMode = currentThemeMode == ThemeMode.system
-                            ? ThemeMode.dark
-                            : ThemeMode.system;
-                      },
-                    );
-                  },
-                ),
-                Divider(),
                 BuildListTile(
                   icon: Icons.person_3,
                   titleText: 'Vendors',
