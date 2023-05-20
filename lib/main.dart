@@ -3,9 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:wed_plan_project/features/cart/data/adapaters/order_model.dart';
+import 'package:wed_plan_project/features/cart/data/adapters/order_model.dart';
 import 'package:wed_plan_project/features/cart/presentation/cubit/cart_bloc.dart';
-import 'package:wed_plan_project/features/favourites/data/adapaters/vendor_model.dart';
+import 'package:wed_plan_project/features/favourites/data/adapters/vendor_model.dart';
 import 'package:wed_plan_project/features/favourites/presentation/cubit/favourite_bloc.dart';
 import 'package:wed_plan_project/utilities/theme_light.dart';
 import 'package:wed_plan_project/utilities/router.dart';
