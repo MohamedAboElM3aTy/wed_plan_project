@@ -73,7 +73,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/egyptian_weddings/',
     phoneNumber: '01020559808',
     rating: 4,
-    price: 10000,
+    price: 17500,
   ),
   Vendor(
     name: 'Kamal Sayed',
@@ -93,7 +93,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/omneya.weddings/',
     phoneNumber: '01104374081',
     rating: 4.2,
-    price: 17500,
+    price: 12500,
   ),
   Vendor(
     name: 'Islam Adel',
@@ -103,7 +103,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/islamadel_weddingplanner/',
     phoneNumber: '01104374081',
     rating: 4.5,
-    price: 12500,
+    price: 12000,
   ),
   Vendor(
     name: 'Bling Wedding',
@@ -113,7 +113,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/bling.weddings/',
     phoneNumber: '01005048757',
     rating: 4,
-    price: 30000,
+    price: 10000,
   ),
   Vendor(
     name: 'Hossam Antikka',
@@ -123,7 +123,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/antikkahossam/',
     phoneNumber: '01128275960',
     rating: 5,
-    price: 15000,
+    price: 25000,
   ),
   Vendor(
     name: 'Ahmed Mekawy',
@@ -133,7 +133,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/mekkyvideocompany/',
     phoneNumber: '01553966341',
     rating: 4.5,
-    price: 10000,
+    price: 22500,
   ),
   Vendor(
     name: 'Abed Photography',
@@ -143,7 +143,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/abedphotograhy/',
     phoneNumber: '01097803400',
     rating: 4,
-    price: 12500,
+    price: 20000,
   ),
   Vendor(
     name: 'Aboutaleb',
@@ -153,7 +153,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/aboutalebofficial/',
     phoneNumber: '01281000727',
     rating: 4,
-    price: 16000,
+    price: 17500,
   ),
   Vendor(
     name: 'Karim Basyoni',
@@ -163,7 +163,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/karim_basyoni_photography/',
     phoneNumber: '01063813840',
     rating: 4,
-    price: 20000,
+    price: 15000,
   ),
   Vendor(
     name: 'Sarah Khalil',
@@ -173,7 +173,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/sarahkhalilphotography/',
     phoneNumber: '01006690708',
     rating: 4,
-    price: 17500,
+    price: 12500,
   ),
   Vendor(
     name: 'Dina Ragheb',
@@ -233,7 +233,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/noha_shereif/',
     phoneNumber: '01022197275',
     rating: 4,
-    price: 5000,
+    price: 7500,
   ),
   Vendor(
     name: 'Mai Yasser',
@@ -273,7 +273,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/veildesigner_dina_elgabarouny/',
     phoneNumber: '01222731082',
     rating: 4,
-    price: 10000,
+    price: 12500,
   ),
   Vendor(
     name: 'Nada Ibrahiem',
@@ -283,7 +283,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/nadaibrahiem.veildesinger/',
     phoneNumber: '01202208431',
     rating: 4,
-    price: 7500,
+    price: 10000,
   ),
   Vendor(
     name: 'Mayar Sherif',
@@ -293,7 +293,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/mayar.sherif.veildesigner/',
     phoneNumber: '01069064463',
     rating: 4,
-    price: 5000,
+    price: 7500,
   ),
   Vendor(
     name: 'Rasha Refaat',
@@ -333,7 +333,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/magi_borhan_hairdresser/',
     phoneNumber: '01026122827',
     rating: 4.5,
-    price: 10000,
+    price: 12500,
   ),
   Vendor(
     name: 'Kirillos Hair Dresser',
@@ -343,7 +343,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/kirollos_hairdresser/',
     phoneNumber: '01202229095',
     rating: 4.2,
-    price: 7500,
+    price: 10000,
   ),
   Vendor(
     name: 'Aya Saied',
@@ -353,7 +353,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/ayasaiedhairdresser/',
     phoneNumber: '01062922903',
     rating: 4,
-    price: 5000,
+    price: 7500,
   ),
   Vendor(
     name: 'Simply Nails',
@@ -393,7 +393,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/l.a_nails_egypt/',
     phoneNumber: '01114281888',
     rating: 4,
-    price: 10000,
+    price: 12500,
   ),
   Vendor(
     name: 'Sivo Nails',
@@ -403,7 +403,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/sivo_nails/',
     phoneNumber: '01007601991',
     rating: 4,
-    price: 7500,
+    price: 10000,
   ),
   Vendor(
     name: 'Wink Lashes & Nails',
@@ -413,7 +413,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/winklashesandnails/',
     phoneNumber: '01155564448',
     rating: 4,
-    price: 5000,
+    price: 7500,
   ),
   Vendor(
     name: 'Samo Hagras',
@@ -423,7 +423,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/samo_hagras/',
     phoneNumber: '01120186000',
     rating: 4,
-    price: 20000,
+    price: 25000,
   ),
   Vendor(
     name: 'Hany El Behairy',
@@ -433,7 +433,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/hanyelbehairyhautecouture/',
     phoneNumber: '01028970909',
     rating: 5,
-    price: 17500,
+    price: 20000,
   ),
   Vendor(
     name: 'Couture Reem',
@@ -443,7 +443,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/couturereem/',
     phoneNumber: '01002816234',
     rating: 4,
-    price: 15000,
+    price: 17500,
   ),
   Vendor(
     name: 'Fatma Nasr',
@@ -453,7 +453,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/fatmanasrcouture/',
     phoneNumber: '01024740624',
     rating: 4,
-    price: 10000,
+    price: 15000,
   ),
   Vendor(
     name: 'Norhan bakry',
@@ -463,7 +463,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/fashiondesigner.norhanbakry/',
     phoneNumber: '01006645859',
     rating: 4,
-    price: 10000,
+    price: 12500,
   ),
   Vendor(
     name: 'Beshoy & Madona',
@@ -483,7 +483,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/ishraqa.jewelry/',
     phoneNumber: '01098267764',
     rating: 5,
-    price: 20000,
+    price: 25000,
   ),
   Vendor(
     name: 'Zayed jewelry',
@@ -493,7 +493,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/zayed.jewellery/',
     phoneNumber: '01000021877',
     rating: 4,
-    price: 17500,
+    price: 20000,
   ),
   Vendor(
     name: 'Khorrassany Jewelery',
@@ -503,7 +503,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/khorrassany_jewellery/',
     phoneNumber: '01007920000',
     rating: 4,
-    price: 15000,
+    price: 17500,
   ),
   Vendor(
     name: 'Idar Jewelery',
@@ -523,7 +523,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/bajocchi_jewellers/',
     phoneNumber: '01272550241',
     rating: 4,
-    price: 10000,
+    price: 12500,
   ),
   Vendor(
     name: 'Glamour Jewelery',
@@ -533,7 +533,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/glamour.jewellery/',
     phoneNumber: '01024444479',
     rating: 4,
-    price: 50000,
+    price: 10000,
   ),
   Vendor(
     name: 'Saraz Headpieces',
@@ -553,7 +553,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/uniqueen_headpiece/',
     phoneNumber: '01019791631',
     rating: 4,
-    price: 15000,
+    price: 17500,
   ),
   Vendor(
     name: 'Sara Medhat',
@@ -563,7 +563,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/headpiecebysara/',
     phoneNumber: '01061148621',
     rating: 5,
-    price: 10000,
+    price: 15000,
   ),
   Vendor(
     name: 'Centimes Bourgeois Headpieces',
@@ -573,7 +573,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/cbheadpieces/',
     phoneNumber: '+961813517 35',
     rating: 4,
-    price: 5000,
+    price: 10000,
   ),
   Vendor(
     name: 'Halo Headpieces',
@@ -583,7 +583,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/halo.headpieces/',
     phoneNumber: '01091177332',
     rating: 4,
-    price: 1500,
+    price: 7500,
   ),
   Vendor(
     name: 'G.N Headpieces',
@@ -593,7 +593,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/g.n_headpieces/',
     phoneNumber: '01064111463',
     rating: 4,
-    price: 1500,
+    price: 5000,
   ),
   Vendor(
     name: 'Nour Ali',
@@ -613,7 +613,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/bouquet_bride_by_shimaa_omar/',
     phoneNumber: '01202990622',
     rating: 4.5,
-    price: 1500,
+    price: 2000,
   ),
   Vendor(
     name: 'Sahar',
@@ -623,7 +623,7 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/bouquet_bride_by_sahar/',
     phoneNumber: '01028858078',
     rating: 4,
-    price: 20000,
+    price: 1750,
   ),
   Vendor(
     name: 'Mariam Hamdy',
@@ -643,6 +643,6 @@ const availableVendors = [
     businessUrl: 'https://www.instagram.com/nashwa_bride_bouquet/',
     phoneNumber: '01011862090',
     rating: 4,
-    price: 1500,
+    price: 1250,
   ),
 ];
