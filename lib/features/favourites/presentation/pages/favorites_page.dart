@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:wed_plan_project/features/favourites/persentation/cubit/favourite_bloc.dart';
-import 'package:wed_plan_project/features/favourites/persentation/widgets/favorites_container.dart';
+import 'package:wed_plan_project/features/favourites/presentation/cubit/favourite_bloc.dart';
+import 'package:wed_plan_project/features/favourites/presentation/widgets/favorites_container.dart';
 import 'package:wed_plan_project/models/vendor.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 
