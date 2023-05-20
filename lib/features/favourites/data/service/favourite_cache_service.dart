@@ -1,6 +1,6 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:wed_plan_project/models/vendor.dart';
-import 'package:wed_plan_project/features/favourites/data/adapaters/vendor_model.dart';
+import 'package:wed_plan_project/features/favourites/data/adapters/vendor_model.dart';
 import 'package:wed_plan_project/features/favourites/data/mapper/vendor_model_mapper.dart';
 
 abstract class FavoriteCacheService {
