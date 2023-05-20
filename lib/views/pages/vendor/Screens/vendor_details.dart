@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wed_plan_project/Providers/cart_provider.dart';
 
 import 'package:wed_plan_project/models/vendor.dart';
-import 'package:wed_plan_project/features/cart/persentation/cubit/cart_bloc.dart';
-import 'package:wed_plan_project/features/favourites/persentation/cubit/favourite_bloc.dart';
+import 'package:wed_plan_project/features/cart/presentation/cubit/cart_bloc.dart';
+import 'package:wed_plan_project/features/favourites/presentation/cubit/favourite_bloc.dart';
 import 'package:wed_plan_project/views/pages/vendor/widgets/description_widget.dart';
 import 'package:wed_plan_project/views/pages/vendor/widgets/drop_down_menu.dart';
 import 'package:wed_plan_project/views/widgets/main_button.dart';
