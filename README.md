@@ -16,9 +16,9 @@
 2-	Hive integration to store the data locally and cached it to make the process of favorites and cart is smoother to the user.
 3-	Bloc & cubit as state management.
 4-	Implement Search Feature to search for vendors.
-5-	Used Nav Bar to allow the user to navigate between icons.
-6-	 Used Animation to make the UI looks more beauty.
-7-	 Possibility of mark the vendor as favorite or not or adding or remove from cart before checkout.
+5-	Used Navigation Bar to allow the user to navigate between Screens.
+6-	Used Animation to make the UI looks more beauty.
+7-	Possibility of mark the vendor as favorite or not or adding or remove from cart before checkout.
 8-	
 
 ## ScreenShots 📸 
