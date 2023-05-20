@@ -9,4 +9,6 @@ class AppRoutes {
   static const String bottomNavBar = '/navBar';
   static const String vendorDetails = '/vendorDetails';
   static const String searchPage = '/searchPage';
+  static const String favoritesPage = '/favoritePage';
+  static const String checkoutPage = '/checkoutPage';
 }
