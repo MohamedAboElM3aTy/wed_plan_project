@@ -4,8 +4,8 @@ import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:wed_plan_project/utilities/constants.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/Home/Categories_screen.dart';
-import 'package:wed_plan_project/views/pages/Home/favorites.dart';
-import 'package:wed_plan_project/views/pages/cart/cart.dart';
+import 'package:wed_plan_project/features/favourites/persentation/pages/favorites_page.dart';
+import 'package:wed_plan_project/features/cart/persentation/pages/cart_page.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/views/Layouts/main_drawer.dart';
 import 'package:wed_plan_project/views/pages/checkout/checkout.dart';
@@ -23,8 +23,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
   List<Widget> _buildScreens() {
     return [
       CategoriesScreen(availableVendors: availableVendors),
-      FavoritesPage(vendors: availableVendors),
-      CartScreen(),
+      FavoritesPage(),
+      CartPage(),
       CheckoutPage(),
     ];
   }
@@ -97,8 +97,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text(
           _title(),
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: 22,
+                fontWeight: FontWeight.w500,
                 color: kColorScheme.secondary,
               ),
         ),
