@@ -11,19 +11,33 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.1.11
+
+  # State management
+  flutter_bloc: ^8.1.2
+  flutter_riverpod: ^2.3.6
+
+  # FireBase
   firebase_auth: ^4.4.0
   firebase_core: ^2.9.0
   firebase_storage: ^11.1.1
-  flutter:
-    sdk: flutter
-  flutter_riverpod: ^2.3.6
+
+  # UI
   flutter_svg: ^2.0.4
   google_fonts: ^4.0.3
   persistent_bottom_nav_bar_v2: ^4.2.8
   transparent_image: ^2.0.1
-  url_launcher: ^6.1.11
+
+  # Local database
+  hive: ^2.2.3
+  hive_flutter:
+  rxdart: ^0.27.7
 
 dev_dependencies:
+  hive_generator:
+  build_runner:
   flutter_test:
     sdk: flutter
 
