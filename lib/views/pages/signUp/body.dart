@@ -70,8 +70,7 @@ class _BodyState extends State<Body> {
                             'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number'),
                       ),
                     );
-                    return 'Can\'t be empty';
-                    // 'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number';
+                    return 'Enter a valid Password!';
                   }
                   return null;
                 },
