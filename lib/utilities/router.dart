@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import './routes.dart';
-import 'package:wed_plan_project/features/favourites/persentation/pages/favorites_page.dart';
+import 'package:wed_plan_project/features/favourites/presentation/pages/favorites_page.dart';
 import 'package:wed_plan_project/views/Layouts/search_page.dart';
 import 'package:wed_plan_project/views/pages/vendor/Screens/vendor_details.dart';
 import 'package:wed_plan_project/views/pages/Home/vendors_screen.dart';
 import 'package:wed_plan_project/views/pages/Home/Categories_screen.dart';
 import 'package:wed_plan_project/views/Layouts/bottom_navbar_screen.dart';
-import 'package:wed_plan_project/features/cart/persentation/pages/cart_page.dart';
+import 'package:wed_plan_project/features/cart/presentation/pages/cart_page.dart';
 import 'package:wed_plan_project/views/pages/onboarding/onboard_screen.dart';
 import 'package:wed_plan_project/views/pages/signIn/login_screen.dart';
 import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
