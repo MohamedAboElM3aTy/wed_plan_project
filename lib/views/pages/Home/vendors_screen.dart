@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/models/vendor.dart';
 import 'package:wed_plan_project/utilities/constants.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/widgets/vendor_item.dart';
 
 class VendorsScreen extends StatelessWidget {
