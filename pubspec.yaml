@@ -11,35 +11,27 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5
-  flutter:
-    sdk: flutter
-  url_launcher: ^6.1.11
-
-  # State management
-  flutter_bloc: ^8.1.2
-  flutter_riverpod: ^2.3.6
-
-  # FireBase
   firebase_auth: ^4.4.0
   firebase_core: ^2.9.0
   firebase_storage: ^11.1.1
-
-  # UI
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
   flutter_svg: ^2.0.4
   google_fonts: ^4.0.3
-  persistent_bottom_nav_bar_v2: ^4.2.8
-  transparent_image: ^2.0.1
-
-  # Local database
   hive: ^2.2.3
   hive_flutter:
+  intl: ^0.18.1
+  persistent_bottom_nav_bar_v2: ^4.2.8
   rxdart: ^0.27.7
+  transparent_image: ^2.0.1
+  url_launcher: ^6.1.11
 
 dev_dependencies:
-  hive_generator:
   build_runner:
   flutter_test:
     sdk: flutter
+  hive_generator:
 
 flutter:
   uses-material-design: true
@@ -48,10 +40,3 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/images/catImages/
-  #     fonts:
-  #       - asset: assets/fonts/-Regular.ttf
-  #       - asset: assets/fonts/-Bold.ttf
-  #         weight: 700
-  #       - asset: assets/fonts/-Italic.ttf
-  #         style: italic
-  #       - asset: assets/fonts/-Light.ttf
