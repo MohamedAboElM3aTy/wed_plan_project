@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import './routes.dart';
-import 'package:wed_plan_project/features/favourites/presentation/pages/favorites_page.dart';
+
+import 'package:wed_plan_project/models/cart.dart';
 import 'package:wed_plan_project/views/Layouts/search_page.dart';
 import 'package:wed_plan_project/views/pages/vendor/Screens/vendor_details.dart';
 import 'package:wed_plan_project/views/pages/Home/vendors_screen.dart';
@@ -14,6 +14,7 @@ import 'package:wed_plan_project/views/pages/signUp/signUp_screen.dart';
 import 'package:wed_plan_project/views/pages/welcome_screen.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/views/pages/checkout/checkout.dart';
+import 'package:wed_plan_project/features/favourites/presentation/pages/favorites_page.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -22,9 +23,24 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (_) => WelcomeScreen(),
         settings: settings,
       );
+    case AppRoutes.onBoardingScreen:
+      return MaterialPageRoute(
+        builder: (_) => OnBoardingScreen(),
+        settings: settings,
+      );
+    case AppRoutes.signUpScreen:
+      return MaterialPageRoute(
+        builder: (_) => SignUp(),
+        settings: settings,
+      );
     case AppRoutes.loginPage:
       return MaterialPageRoute(
         builder: (_) => LoginScreen(),
+        settings: settings,
+      );
+    case AppRoutes.bottomNavBar:
+      return MaterialPageRoute(
+        builder: (_) => BottomNavbar(),
         settings: settings,
       );
     case AppRoutes.categoriesScreen:
@@ -34,21 +50,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
         settings: settings,
       );
-    case AppRoutes.signUpScreen:
-      return MaterialPageRoute(
-        builder: (_) => SignUp(),
-        settings: settings,
-      );
-    case AppRoutes.onBoardingScreen:
-      return MaterialPageRoute(
-        builder: (_) => OnBoardingScreen(),
-        settings: settings,
-      );
-    case AppRoutes.bottomNavBar:
-      return MaterialPageRoute(
-        builder: (_) => BottomNavbar(),
-        settings: settings,
-      );
     case AppRoutes.vendorsScreen:
       final args = settings.arguments as Map<String, dynamic>;
       return MaterialPageRoute(
@@ -56,11 +57,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           vendors: args['vendors'],
           title: args['title'],
         ),
-      );
-    case AppRoutes.cartScreen:
-      return MaterialPageRoute(
-        builder: (_) => CartPage(),
-        settings: settings,
       );
     case AppRoutes.vendorDetails:
       final args = settings.arguments as Map<String, dynamic>;
@@ -80,9 +76,17 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (_) => FavoritesPage(),
         settings: settings,
       );
-    case AppRoutes.checkoutPage:
+    case AppRoutes.cartScreen:
       return MaterialPageRoute(
-        builder: (_) => CheckoutPage(),
+        builder: (_) => CartPage(),
+        settings: settings,
+      );
+    case AppRoutes.checkoutPage:
+      final args = settings.arguments as List<CartItem>;
+      return MaterialPageRoute(
+        builder: (_) => CheckoutPage(
+          cartItems: args,
+        ),
         settings: settings,
       );
     default:
