@@ -9,7 +9,6 @@ class Vendor extends Equatable {
   final String phoneNumber;
   final double rating;
   final int price;
-  
 
   const Vendor(
       {required this.name,
