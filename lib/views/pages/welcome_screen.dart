@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
 
+import 'package:wed_plan_project/utilities/routes.dart';
 import '../widgets/text_icon_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                   Text(
+                  Text(
                     'Welcome To Bridely',
                     style: TextStyle(
                       fontSize: 33,
