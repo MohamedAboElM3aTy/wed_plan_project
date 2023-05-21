@@ -27,9 +27,11 @@ class _SearchPageState extends State<SearchPage> {
   List<Vendor> _results = [];
 
   void _onSearch() {
-    setState(() {
-      _results = search(_searchController.text);
-    });
+    setState(
+      () {
+        _results = search(_searchController.text);
+      },
+    );
   }
 
   @override
@@ -37,7 +39,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text('Search'),
+        title: const Text('Search'),
       ),
       body: Column(
         children: [
@@ -50,9 +52,7 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 10.0,
-          ),
+          const SizedBox(height: 10.0),
           MainButton(
             text: 'Search',
             onTap: _onSearch,
@@ -86,9 +86,7 @@ class _SearchPageState extends State<SearchPage> {
                   onTap: () =>
                       Navigator.of(context, rootNavigator: true).pushNamed(
                     AppRoutes.vendorDetails,
-                    arguments: {
-                      'vendor': vendor,
-                    },
+                    arguments: {'vendor': vendor},
                   ),
                 );
               },
