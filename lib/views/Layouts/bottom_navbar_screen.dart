@@ -8,7 +8,6 @@ import 'package:wed_plan_project/features/favourites/presentation/pages/favorite
 import 'package:wed_plan_project/features/cart/presentation/pages/cart_page.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/views/Layouts/main_drawer.dart';
-import 'package:wed_plan_project/views/pages/checkout/checkout.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -25,7 +24,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
       CategoriesScreen(availableVendors: availableVendors),
       FavoritesPage(),
       CartPage(),
-      CheckoutPage(),
     ];
   }
 
@@ -54,8 +52,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
         return 'Favorites';
       case 2:
         return 'Cart';
-      case 3:
-        return 'Checkout';
       default:
         return 'Categories';
     }
@@ -78,12 +74,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
       PersistentBottomNavBarItem(
         icon: Icon(Icons.shopping_cart),
         title: ('Cart'),
-        activeColorPrimary: Theme.of(context).primaryColor,
-        inactiveColorPrimary: Colors.grey[400],
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(Icons.shopping_cart_checkout),
-        title: ('Checkout'),
         activeColorPrimary: Theme.of(context).primaryColor,
         inactiveColorPrimary: Colors.grey[400],
       ),

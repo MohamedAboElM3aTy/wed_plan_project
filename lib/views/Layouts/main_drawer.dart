@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
 import 'package:wed_plan_project/services/auth.dart';
-import 'package:wed_plan_project/utilities/constants.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
+import 'package:wed_plan_project/utilities/constants.dart';
 import '../widgets/drawer_list_tile.dart';
 
 class MainDrawer extends StatefulWidget {
@@ -91,15 +91,6 @@ class _MainDrawerState extends State<MainDrawer> {
                   onTap: () {
                     Navigator.pop(context);
                     widget.controller.jumpToTab(2);
-                  },
-                ),
-                Divider(),
-                BuildListTile(
-                  icon: Icons.shopping_bag_outlined,
-                  titleText: 'Check-out',
-                  onTap: () {
-                    Navigator.pop(context);
-                    widget.controller.jumpToTab(3);
                   },
                 ),
                 Divider(),
