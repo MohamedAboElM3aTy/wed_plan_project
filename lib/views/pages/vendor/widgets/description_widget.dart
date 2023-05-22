@@ -24,23 +24,24 @@ class DescriptionWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.black,
                   ),
             ),
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 8),
           Text(
             'Hello I am ${vendor.name}, I am a ${vendor.category}, I provide many services you can check it out on my instagram page and you will Find examples on my work , I hope it will be helpful to Your needs, wish you a happy wedding :)',
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
+                  color: Colors.black.withOpacity(0.5),
                 ),
           ),
           Align(
               alignment: Alignment.bottomRight,
               child: Container(
-                padding: EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width * 0.5,
+                padding: EdgeInsets.all(8),
+                width: MediaQuery.of(context).size.width * 0.42,
                 height: MediaQuery.of(context).size.height * 0.07,
                 child: ElevatedButton.icon(
                   style: ButtonStyle(
@@ -61,9 +62,8 @@ class DescriptionWidget extends StatelessWidget {
                     'Instagram',
                     style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontSize: 20,
-                        fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black),
+                        color: Colors.white),
                   ),
                 ),
               ),
