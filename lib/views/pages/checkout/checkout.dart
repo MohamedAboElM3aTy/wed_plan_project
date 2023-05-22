@@ -77,16 +77,17 @@ class _CheckoutPageState extends State<CheckoutPage> {
 
   @override
   Widget build(BuildContext context) {
+    final themes = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kColorScheme.primary,
         title: Text(
           'Checkout',
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                fontSize: 22,
-                fontWeight: FontWeight.w500,
-                color: kColorScheme.secondary,
-              ),
+          style: themes.titleMedium!.copyWith(
+            fontSize: 22,
+            fontWeight: FontWeight.w500,
+            color: kColorScheme.secondary,
+          ),
         ),
       ),
       body: Column(
@@ -96,10 +97,10 @@ class _CheckoutPageState extends State<CheckoutPage> {
             child: FittedBox(
               child: Text(
                 'Order Summary',
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: themes.bodyLarge!.copyWith(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -123,36 +124,27 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           // leading: Text(checkout.elementAt(index).vendor.category),
                           title: Text(
                             checkout.elementAt(index).vendor.name,
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge!
-                                .copyWith(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).primaryColor,
-                                ),
+                            style: themes.titleLarge!.copyWith(
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor,
+                            ),
                           ),
                           subtitle: Text(
                             checkout.elementAt(index).packageName,
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge!
-                                .copyWith(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black.withOpacity(0.5),
-                                ),
+                            style: themes.titleLarge!.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black.withOpacity(0.5),
+                            ),
                           ),
                           trailing: Text(
                             '\$${checkout.elementAt(index).vendor.price.toString()}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .displayLarge!
-                                .copyWith(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: kColorScheme.error,
-                                ),
+                            style: themes.displayLarge!.copyWith(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: kColorScheme.error,
+                            ),
                           ),
                         ),
                       ],
@@ -174,11 +166,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
               child: FittedBox(
                 child: Text(
                   'Total price : \$${widget.cartItems.fold(0, (sum, item) => sum + item.vendor.price)}',
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+                  style: themes.titleLarge!.copyWith(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -200,11 +192,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
               onPressed: _submitOrder,
               child: Text(
                 'Done',
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                style: themes.titleLarge!.copyWith(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
