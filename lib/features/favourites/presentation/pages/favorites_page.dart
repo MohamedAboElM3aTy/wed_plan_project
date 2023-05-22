@@ -44,7 +44,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.error,
+                        color: Theme.of(context).primaryColor.withOpacity(0.5),
                       ),
                 ),
               );
@@ -59,10 +59,11 @@ class _FavoritesPageState extends State<FavoritesPage> {
                     key: Key(vendor.name),
                     direction: DismissDirection.endToStart,
                     onDismissed: (_) {
-                      // Remove the item from favorites using the bloc
+                      // ! Remove the item from favorites using the bloc
                       _bloc.add(RemoveFavoriteEvent(vendor));
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
+                          duration: const Duration(seconds: 1),
                           content:
                               Text('${vendor.name} Removed from favorites.'),
                         ),
