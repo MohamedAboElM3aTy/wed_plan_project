@@ -9,7 +9,8 @@ class DropDownMenuComponent extends StatelessWidget {
     Key? key,
     required this.onChanged,
     required this.items,
-    required this.hint, this.selectedValue,
+    required this.hint,
+    this.selectedValue,
   }) : super(key: key);
 
   @override
@@ -27,14 +28,20 @@ class DropDownMenuComponent extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Theme.of(context).primaryColor,
             fontSize: 22,
-            ),
+          ),
         ),
       ),
       onChanged: onChanged,
       items: items.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
-          child: Text(value),
+          child: Text(
+            value,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+          ),
         );
       }).toList(),
     );
