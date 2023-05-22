@@ -7,16 +7,20 @@ class Vendor extends Equatable {
   final String imageUrl;
   final String businessUrl;
   final String phoneNumber;
+  final double rating;
+  final int price;
 
-  const Vendor({
-    required this.name,
-    required this.id,
-    required this.category,
-    required this.imageUrl,
-    required this.businessUrl,
-    required this.phoneNumber,
-  });
-  
+  const Vendor(
+      {required this.name,
+      required this.id,
+      required this.category,
+      required this.imageUrl,
+      required this.businessUrl,
+      required this.phoneNumber,
+      required this.rating,
+      required this.price,
+      });
+
   @override
   List<Object?> get props => [
         name,
@@ -25,5 +29,7 @@ class Vendor extends Equatable {
         imageUrl,
         businessUrl,
         phoneNumber,
-  ];
+        rating,
+        price,
+      ];
 }

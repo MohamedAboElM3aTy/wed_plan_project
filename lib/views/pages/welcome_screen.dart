@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
 
+import 'package:wed_plan_project/utilities/routes.dart';
 import '../widgets/text_icon_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 140,
+            top: 170,
             left: 240,
             right: 10,
             child: Padding(
@@ -29,13 +29,13 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const Text(
-                    'Welcome To wedPlan',
+                  Text(
+                    'Welcome To Bridely',
                     style: TextStyle(
                       fontSize: 33,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black54,
+                      color: Colors.black.withOpacity(0.7),
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 3,
@@ -45,11 +45,12 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
-            left: 220,
+            bottom: 20,
+            left: 250,
             child: AdaptiveButton(
               text: 'Get Started',
-              press: () => Navigator.of(context).pushNamed(AppRoutes.onBoardingScreen),
+              press: () =>
+                  Navigator.of(context).pushNamed(AppRoutes.onBoardingScreen),
             ),
           ),
         ],

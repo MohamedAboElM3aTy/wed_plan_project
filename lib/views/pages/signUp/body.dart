@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:wed_plan_project/services/auth.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/signUp/background.dart';
 import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
@@ -7,7 +8,6 @@ import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-import 'package:wed_plan_project/services/auth.dart';
 import 'package:wed_plan_project/views/pages/signUp/build_row.dart';
 
 class Body extends StatefulWidget {
@@ -64,7 +64,13 @@ class _BodyState extends State<Body> {
                   if (value!.isEmpty ||
                       value.length < 8 ||
                       !passwordRegex.hasMatch(value)) {
-                    return 'Not a valid password';
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                            'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number'),
+                      ),
+                    );
+                    return 'Enter a valid Password!';
                   }
                   return null;
                 },

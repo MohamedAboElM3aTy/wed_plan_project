@@ -4,7 +4,8 @@ import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:wed_plan_project/utilities/constants.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/Home/Categories_screen.dart';
-import 'package:wed_plan_project/views/pages/cart/cart.dart';
+import 'package:wed_plan_project/features/favourites/presentation/pages/favorites_page.dart';
+import 'package:wed_plan_project/features/cart/presentation/pages/cart_page.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/views/Layouts/main_drawer.dart';
 
@@ -21,7 +22,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
   List<Widget> _buildScreens() {
     return [
       CategoriesScreen(availableVendors: availableVendors),
-      const CartScreen(),
+      FavoritesPage(),
+      CartPage(),
     ];
   }
 
@@ -47,6 +49,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
       case 0:
         return 'Categories';
       case 1:
+        return 'Favorites';
+      case 2:
         return 'Cart';
       default:
         return 'Categories';
@@ -58,6 +62,12 @@ class _BottomNavbarState extends State<BottomNavbar> {
       PersistentBottomNavBarItem(
         icon: Icon(Icons.home),
         title: ('Home'),
+        activeColorPrimary: Theme.of(context).primaryColor,
+        inactiveColorPrimary: Colors.grey[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.star),
+        title: ('Favorites'),
         activeColorPrimary: Theme.of(context).primaryColor,
         inactiveColorPrimary: Colors.grey[400],
       ),
@@ -77,8 +87,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text(
           _title(),
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: 22,
+                fontWeight: FontWeight.w500,
                 color: kColorScheme.secondary,
               ),
         ),

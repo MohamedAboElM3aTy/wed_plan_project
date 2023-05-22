@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
 import 'package:wed_plan_project/services/auth.dart';
-import 'package:wed_plan_project/utilities/constants.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
+import 'package:wed_plan_project/utilities/constants.dart';
 import '../widgets/drawer_list_tile.dart';
 
 class MainDrawer extends StatefulWidget {
@@ -20,7 +20,6 @@ class MainDrawer extends StatefulWidget {
 
 class _MainDrawerState extends State<MainDrawer> {
   final Auth auth = Auth();
-  ThemeMode currentThemeMode = ThemeMode.system;
 
   @override
   Widget build(BuildContext context) {
@@ -69,20 +68,6 @@ class _MainDrawerState extends State<MainDrawer> {
             child: Column(
               children: [
                 BuildListTile(
-                  icon: Icons.dark_mode,
-                  titleText: 'Dark Mode',
-                  onTap: () {
-                    setState(
-                      () {
-                        currentThemeMode = currentThemeMode == ThemeMode.system
-                            ? ThemeMode.dark
-                            : ThemeMode.system;
-                      },
-                    );
-                  },
-                ),
-                Divider(),
-                BuildListTile(
                   icon: Icons.person_3,
                   titleText: 'Vendors',
                   onTap: () {
@@ -92,11 +77,20 @@ class _MainDrawerState extends State<MainDrawer> {
                 ),
                 Divider(),
                 BuildListTile(
-                  icon: Icons.shop_2_outlined,
-                  titleText: 'Cart',
+                  icon: Icons.favorite_outline,
+                  titleText: 'Favorites',
                   onTap: () {
                     Navigator.pop(context);
                     widget.controller.jumpToTab(1);
+                  },
+                ),
+                Divider(),
+                BuildListTile(
+                  icon: Icons.shopping_cart,
+                  titleText: 'Cart',
+                  onTap: () {
+                    Navigator.pop(context);
+                    widget.controller.jumpToTab(2);
                   },
                 ),
                 Divider(),

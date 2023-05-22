@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wed_plan_project/data/dummy_data.dart';
 import 'package:wed_plan_project/models/vendor.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
-import 'package:wed_plan_project/views/widgets/rounded_button.dart';
+import 'package:wed_plan_project/views/widgets/main_button.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -27,9 +27,11 @@ class _SearchPageState extends State<SearchPage> {
   List<Vendor> _results = [];
 
   void _onSearch() {
-    setState(() {
-      _results = search(_searchController.text);
-    });
+    setState(
+      () {
+        _results = search(_searchController.text);
+      },
+    );
   }
 
   @override
@@ -37,7 +39,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text('Search'),
+        title: const Text('Search'),
       ),
       body: Column(
         children: [
@@ -50,14 +52,10 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          RoundedButton(
-            color: Colors.deepPurpleAccent,
-            textColor: Colors.white,
-            press: _onSearch,
+          const SizedBox(height: 10.0),
+          MainButton(
             text: 'Search',
+            onTap: _onSearch,
           ),
           const SizedBox(height: 10),
           Expanded(
@@ -88,9 +86,7 @@ class _SearchPageState extends State<SearchPage> {
                   onTap: () =>
                       Navigator.of(context, rootNavigator: true).pushNamed(
                     AppRoutes.vendorDetails,
-                    arguments: {
-                      'vendor': vendor,
-                    },
+                    arguments: {'vendor': vendor},
                   ),
                 );
               },
