@@ -1,6 +1,6 @@
 # Bridely 👰🏻‍♀️
 
-### This is my Graduation Project in MUST university :) 
+### Bridely is my idea and my graduation project in MUST university, hope it likes you ✅
 
 ##
 
@@ -34,3 +34,5 @@
 
 
 ## ScreenShots 📸 
+<img width="1000" alt="Mockup" src="https://github.com/MohamedAboElM3aTy/wed_plan_project/assets/98196426/743091ce-47d1-4a9f-9069-e586b2208efb">
+
