@@ -16,15 +16,17 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
     _cacheService = FavoriteCacheServiceImpl();
     _favoriteVendorController = BehaviorSubject<List<Vendor>>();
     _cacheService.init();
-    on<FavouriteEvent>((event, emit) async {
-      if (event is FavouriteLoadEvent) {
-        await _loadVendors(emit);
-      } else if (event is FavouriteToggleEvent) {
-        await _toggleVendorToFavourite(event.vendor, emit);
-      } else if (event is RemoveFavoriteEvent) {
-        await _removeVendorFromFavorites(event.vendor, emit);  // ? I edit here
-      }
-    });
+    on<FavouriteEvent>(
+      (event, emit) async {
+        if (event is FavouriteLoadEvent) {
+          await _loadVendors(emit);
+        } else if (event is FavouriteToggleEvent) {
+          await _toggleVendorToFavourite(event.vendor, emit);
+        } else if (event is RemoveFavoriteEvent) {
+          await _removeVendorFromFavorites(event.vendor, emit); // !
+        }
+      },
+    );
   }
 
   Stream<List<Vendor>> get vendorStream =>
@@ -62,7 +64,7 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
     }
   }
 
-  // ? I edit here
+  // !
   Future<void> _removeVendorFromFavorites(
       Vendor vendor, Emitter<FavouriteState> emit) async {
     final vendorIsFavorite = _favouriteVendor.contains(vendor);

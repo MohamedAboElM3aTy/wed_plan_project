@@ -18,7 +18,7 @@ class FavouriteToggleEvent extends FavouriteEvent {
   List<Object> get props => [vendor];
 }
 
-// ? I edit here 
+// !
 class RemoveFavoriteEvent extends FavouriteEvent {
   final Vendor vendor;
 
