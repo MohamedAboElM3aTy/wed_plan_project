@@ -41,7 +41,7 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
     _favoriteVendorController.sink.add(_favouriteVendor);
     await emit.forEach(
       vendorStream,
-      onData: (vendorList) => FavouriteLoaded(vendorList),
+      onData: (List<Vendor> vendorList) => FavouriteLoaded(vendorList),
       onError: (error, stackTrace) => FavouriteError(error.toString()),
     );
   }

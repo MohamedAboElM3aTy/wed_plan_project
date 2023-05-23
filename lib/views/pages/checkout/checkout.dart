@@ -165,7 +165,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
               onPressed: null,
               child: FittedBox(
                 child: Text(
-                  'Total price : \$${widget.cartItems.fold(0, (sum, item) => sum + item.vendor.price)}',
+                  'Total price : \$${widget.cartItems.fold<int>(0, (sum, item) => sum + item.vendor.price)}',
                   style: themes.titleLarge!.copyWith(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

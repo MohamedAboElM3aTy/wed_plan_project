@@ -49,7 +49,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     _cartController.sink.add(_cartItems);
     await emit.forEach(
       cartStream,
-      onData: (cartList) => CartLoadedState(
+      onData: (List<CartItem> cartList) => CartLoadedState(
           cartList,
           cartList.fold(
               0,
