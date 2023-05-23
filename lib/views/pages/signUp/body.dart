@@ -22,6 +22,7 @@ class _BodyState extends State<Body> {
   final _formKey = GlobalKey<FormState>();
   var _email = '', _passWord = '';
   AuthBase authBase = Auth();
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -75,20 +76,24 @@ class _BodyState extends State<Body> {
                   return null;
                 },
               ),
-              RoundedButton(
-                color: Theme.of(context).primaryColor.withOpacity(0.7),
-                text: 'SIGN UP',
-                press: () async {
-                  if (_formKey.currentState!.validate()) {
-                    await authBase.registerWithEmailAndPassword(
-                      _email,
-                      _passWord,
-                    );
-                    Navigator.of(context)
-                        .pushReplacementNamed(AppRoutes.bottomNavBar);
-                  }
-                },
-              ),
+              loading
+                  ? CircularProgressIndicator.adaptive()
+                  : RoundedButton(
+                      color: Theme.of(context).primaryColor.withOpacity(0.7),
+                      text: 'SIGN UP',
+                      press: () async {
+                        setState(() => loading = true);
+                        if (_formKey.currentState!.validate()) {
+                          await authBase.registerWithEmailAndPassword(
+                            _email,
+                            _passWord,
+                          );
+                          Navigator.of(context)
+                              .pushReplacementNamed(AppRoutes.bottomNavBar);
+                        }
+                        setState(() => loading = false);
+                      },
+                    ),
               SizedBox(height: size.height * 0.03),
               AlreadyHaveAnAccountCheck(
                 login: false,
