@@ -15,7 +15,7 @@ const availableCategories = [
   Category(
     id: 'C3',
     title: 'Makeup Artist',
-    imageUrl: 'assets/images/catImages/c3-1.avif',
+    imageUrl: 'assets/images/catImages/c3-1.jpg',
   ),
   Category(
     id: 'C4',
@@ -25,7 +25,7 @@ const availableCategories = [
   Category(
     id: 'C5',
     title: 'Hair Dresser',
-    imageUrl: 'assets/images/catImages/c5-1.avif',
+    imageUrl: 'assets/images/catImages/c5-1.jpg',
   ),
   Category(
     id: 'C6',
@@ -40,17 +40,17 @@ const availableCategories = [
   Category(
     id: 'C8',
     title: 'Jewelry',
-    imageUrl: 'assets/images/catImages/c8-1.avif',
+    imageUrl: 'assets/images/catImages/c8-1.jpg',
   ),
   Category(
     id: 'C9',
     title: 'Head Piece',
-    imageUrl: 'assets/images/catImages/c9-1.avif',
+    imageUrl: 'assets/images/catImages/c9-1.jpg',
   ),
   Category(
     id: 'C10',
     title: 'Bouquet',
-    imageUrl: 'assets/images/catImages/c10-1.avif',
+    imageUrl: 'assets/images/catImages/c10-1.jpeg',
   ),
 ];
 
@@ -359,7 +359,7 @@ const availableVendors = [
     name: 'Simply Nails',
     id: 'C6',
     category: 'Nails',
-    imageUrl: 'assets/images/catImages/c6-2.avif',
+    imageUrl: 'assets/images/catImages/c6-2.jpg',
     businessUrl: 'https://www.instagram.com/simplynailsspa/',
     phoneNumber: '01156926977',
     rating: 5,
@@ -549,7 +549,7 @@ const availableVendors = [
     name: 'Uniqueen Headpieces',
     id: 'C9',
     category: 'Head Piece',
-    imageUrl: 'assets/images/catImages/c9-3.avif',
+    imageUrl: 'assets/images/catImages/c9-3.jpg',
     businessUrl: 'https://www.instagram.com/uniqueen_headpiece/',
     phoneNumber: '01019791631',
     rating: 4,
