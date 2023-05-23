@@ -121,7 +121,6 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     child: Column(
                       children: [
                         ListTile(
-                          // leading: Text(checkout.elementAt(index).vendor.category),
                           title: Text(
                             checkout.elementAt(index).vendor.name,
                             style: themes.titleLarge!.copyWith(

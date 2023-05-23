@@ -19,6 +19,7 @@ class _BodyState extends State<Body> {
   final _formKey = GlobalKey<FormState>();
   var _email = '', _passWord = '';
   AuthBase authBase = Auth();
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -65,35 +66,39 @@ class _BodyState extends State<Body> {
                   return null;
                 },
               ),
-              RoundedButton(
-                color: Theme.of(context).primaryColor,
-                text: 'LOGIN',
-                press: () async {
-                  if (_formKey.currentState!.validate()) {
-                    final isEmailExists =
-                        await authBase.checkEmailExists(_email);
-                    if (!isEmailExists) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                              'This email is not registered with us. Please sign up first.'),
-                        ),
-                      );
-                    } else {
-                      try {
-                        await authBase.loginWithEmailAndPassword(
-                          _email,
-                          _passWord,
-                        );
-                        Navigator.of(context)
-                            .pushReplacementNamed(AppRoutes.bottomNavBar);
-                      } catch (error) {
-                        print(error);
-                      }
-                    }
-                  }
-                },
-              ),
+              loading
+                  ? CircularProgressIndicator.adaptive()
+                  : RoundedButton(
+                      color: Theme.of(context).primaryColor,
+                      text: 'LOGIN',
+                      press: () async {
+                        setState(() => loading = true);
+                        if (_formKey.currentState!.validate()) {
+                          final isEmailExists =
+                              await authBase.checkEmailExists(_email);
+                          if (!isEmailExists) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                    'This email is not registered with us. Please sign up first.'),
+                              ),
+                            );
+                          } else {
+                            try {
+                              await authBase.loginWithEmailAndPassword(
+                                _email,
+                                _passWord,
+                              );
+                              Navigator.of(context)
+                                  .pushReplacementNamed(AppRoutes.bottomNavBar);
+                            } catch (error) {
+                              print(error);
+                            }
+                          }
+                        }
+                        setState(() => loading = false);
+                      },
+                    ),
               SizedBox(height: size.height * 0.03),
               AlreadyHaveAnAccountCheck(
                 press: () =>
