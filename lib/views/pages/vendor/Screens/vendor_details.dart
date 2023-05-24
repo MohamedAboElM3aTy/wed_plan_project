@@ -171,7 +171,7 @@ class _VendorsDetailsState extends State<VendorsDetails> {
             name: 'Price',
             icon: Icons.attach_money,
             iconColor: Colors.white10,
-            text: '\$${widget.vendor.price.toString()}',
+            text: '\EGP ${widget.vendor.price.toString()}',
             nameStyle: themes.titleLarge!.copyWith(
               color: Colors.black,
               fontSize: 22,
@@ -179,7 +179,7 @@ class _VendorsDetailsState extends State<VendorsDetails> {
             catStyle: themes.bodyMedium!.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: 22,
-              color: Colors.red[700],
+              color: Colors.red[900],
             ),
           ),
           const SizedBox(height: 12.0),

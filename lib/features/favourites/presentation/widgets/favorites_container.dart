@@ -50,7 +50,7 @@ class FavoriteContainer extends StatelessWidget {
               ),
         ),
         trailing: Text(
-          '\$${vendor.price}',
+          '\EGP ${vendor.price}',
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w600,

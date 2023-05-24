@@ -47,7 +47,7 @@ class CartCard extends StatelessWidget {
               ),
         ),
         trailing: Text(
-          '\$${cartItem.price.toStringAsFixed(0)}',
+          '\EGP ${cartItem.price.toStringAsFixed(0)}',
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 fontSize: 22,
                 fontWeight: FontWeight.w600,

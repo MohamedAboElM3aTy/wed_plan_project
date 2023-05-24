@@ -138,7 +138,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                             ),
                           ),
                           trailing: Text(
-                            '\$${checkout.elementAt(index).vendor.price.toString()}',
+                            '\EGP ${checkout.elementAt(index).vendor.price.toString()}',
                             style: themes.displayLarge!.copyWith(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -164,7 +164,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
               onPressed: null,
               child: FittedBox(
                 child: Text(
-                  'Total price : \$${widget.cartItems.fold<int>(0, (sum, item) => sum + item.vendor.price)}',
+                  'Total price : \EGP ${widget.cartItems.fold<int>(0, (sum, item) => sum + item.vendor.price)}',
                   style: themes.titleLarge!.copyWith(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
