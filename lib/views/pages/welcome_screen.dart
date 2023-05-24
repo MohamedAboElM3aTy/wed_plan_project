@@ -23,25 +23,22 @@ class WelcomeScreen extends StatelessWidget {
             top: 170,
             left: 240,
             right: 10,
-            child: Padding(
-              padding: const EdgeInsets.all(0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Welcome To Bridely',
-                    style: TextStyle(
-                      fontSize: 33,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black.withOpacity(0.7),
-                    ),
-                    textAlign: TextAlign.center,
-                    maxLines: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'Welcome To Bridely',
+                  style: TextStyle(
+                    fontSize: 33,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black.withOpacity(0.7),
                   ),
-                ],
-              ),
+                  textAlign: TextAlign.center,
+                  maxLines: 3,
+                ),
+              ],
             ),
           ),
           Positioned(
