@@ -30,7 +30,7 @@ class DescriptionWidget extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Hello I am ${vendor.name}, I am a ${vendor.category}, I provide many services you can check it out on my instagram page and you will Find examples on my work , I hope it will be helpful to Your needs, wish you a happy wedding :)',
+            'Hello I am ${vendor.name}, I am a ${vendor.category}, I provide many services you can check it out on my instagram page and you will Find samples on my work , I hope it will be helpful to Your needs, wish you a happy wedding :)',
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                   fontSize: 18,

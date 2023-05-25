@@ -31,10 +31,7 @@ class ProductDetailsRow extends StatelessWidget {
         scheme: 'tel',
         path: phoneNumber,
       );
-      if (await canLaunchUrl(launchUri))
-        await launchUrl(launchUri);
-      else
-        throw 'Could not launch ${launchUri.toString()}';
+      await launchUrl(launchUri);
     }
 
     return Padding(
