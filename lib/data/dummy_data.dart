@@ -192,7 +192,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c3-2.jpeg',
     businessUrl: 'https://www.instagram.com/mai_elbahey/',
     phoneNumber: '01000224843',
-    rating: 4,
+    rating: 4.5,
     price: 17500,
   ),
   Vendor(
@@ -302,7 +302,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c5-2.jpeg',
     businessUrl: 'https://www.instagram.com/rasha_refaat_hairdresser/',
     phoneNumber: '01025267760',
-    rating: 4,
+    rating: 5,
     price: 20000,
   ),
   Vendor(
@@ -312,7 +312,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c5-3.jpeg',
     businessUrl: 'https://www.instagram.com/nana.hairdresser/',
     phoneNumber: '01098341737',
-    rating: 4,
+    rating: 4.5,
     price: 17500,
   ),
   Vendor(
@@ -322,7 +322,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c5-4.jpeg',
     businessUrl: 'https://www.instagram.com/minaayad_hairdresser/',
     phoneNumber: '01283165611',
-    rating: 5,
+    rating: 4,
     price: 15000,
   ),
   Vendor(
@@ -422,7 +422,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c7-3.webp',
     businessUrl: 'https://www.instagram.com/samo_hagras/',
     phoneNumber: '01120186000',
-    rating: 4,
+    rating: 5,
     price: 25000,
   ),
   Vendor(
@@ -432,7 +432,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c7-4.jpeg',
     businessUrl: 'https://www.instagram.com/hanyelbehairyhautecouture/',
     phoneNumber: '01028970909',
-    rating: 5,
+    rating: 4.8,
     price: 20000,
   ),
   Vendor(
@@ -492,7 +492,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c8-3.jpeg',
     businessUrl: 'https://www.instagram.com/zayed.jewellery/',
     phoneNumber: '01000021877',
-    rating: 4,
+    rating: 4.5,
     price: 20000,
   ),
   Vendor(
@@ -502,7 +502,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c8-4.jpeg',
     businessUrl: 'https://www.instagram.com/khorrassany_jewellery/',
     phoneNumber: '01007920000',
-    rating: 4,
+    rating: 4.2,
     price: 17500,
   ),
   Vendor(
@@ -542,7 +542,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c9-2.jpeg',
     businessUrl: 'https://www.instagram.com/saraz_headpieces/',
     phoneNumber: '01101423238',
-    rating: 4,
+    rating: 5,
     price: 20000,
   ),
   Vendor(
@@ -552,7 +552,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c9-3.jpg',
     businessUrl: 'https://www.instagram.com/uniqueen_headpiece/',
     phoneNumber: '01019791631',
-    rating: 4,
+    rating: 4.5,
     price: 17500,
   ),
   Vendor(
@@ -562,7 +562,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c9-4.jpeg',
     businessUrl: 'https://www.instagram.com/headpiecebysara/',
     phoneNumber: '01061148621',
-    rating: 5,
+    rating: 4,
     price: 15000,
   ),
   Vendor(
@@ -622,7 +622,7 @@ const availableVendors = [
     imageUrl: 'assets/images/catImages/c10-4.jpeg',
     businessUrl: 'https://www.instagram.com/bouquet_bride_by_sahar/',
     phoneNumber: '01028858078',
-    rating: 4,
+    rating: 4.2,
     price: 1750,
   ),
   Vendor(

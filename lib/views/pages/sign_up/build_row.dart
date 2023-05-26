@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:wed_plan_project/views/pages/signUp/social_icon.dart';
+import 'package:wed_plan_project/views/pages/sign_up/social_icon.dart';
 
 class buildRow extends StatelessWidget {
   const buildRow({

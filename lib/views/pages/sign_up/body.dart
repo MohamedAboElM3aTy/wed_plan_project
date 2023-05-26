@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:wed_plan_project/services/auth.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
-import 'package:wed_plan_project/views/pages/signUp/background.dart';
-import 'package:wed_plan_project/views/pages/signUp/or_divider.dart';
+import 'package:wed_plan_project/views/pages/sign_up/background.dart';
+import 'package:wed_plan_project/views/pages/sign_up/or_divider.dart';
 import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-import 'package:wed_plan_project/views/pages/signUp/build_row.dart';
+import 'package:wed_plan_project/views/pages/sign_up/build_row.dart';
 
 class Body extends StatefulWidget {
   final Widget child;
