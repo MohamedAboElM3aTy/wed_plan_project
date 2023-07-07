@@ -34,5 +34,8 @@
 
 
 ## ScreenShots 📸 
-<img width="1000" alt="Mockup" src="https://github.com/MohamedAboElM3aTy/wed_plan_project/assets/98196426/743091ce-47d1-4a9f-9069-e586b2208efb">
+<img width="1000" alt="Mockup" src="https://github.com/MohamedAboElM3aTy/wed_plan_project/assets/98196426/57830051-5b47-4141-a2b7-361a3f3bc1e3">
+
+
+
 
