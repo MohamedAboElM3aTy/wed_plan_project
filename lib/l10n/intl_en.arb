@@ -1,0 +1,20 @@
+{
+    "@@locale": "en",
+    "login": "LOGIN",
+    "signUp": "SIGN UP",
+    "done": "Done",
+    "or": "OR",
+    "greeting": "Welcome to our app",
+    "goal": "The main goal is to serve bridesmaid in their wedding",
+    "step": "We will be with you step by step :)",
+    "email": "Email",
+    "enterValidEmail": "Enter a valid email",
+    "password": "Password",
+    "enterValidPassword": "Enter a valid password",
+    "forgetPassword": "Forget Password?",
+    "dontHaveAccount": "Don't have an account?",
+    "haveAccount": "Have an account?",
+    "name": "Name",
+    "confirmPassword": "Confirm Password",
+    "phone": "Phone"
+}
