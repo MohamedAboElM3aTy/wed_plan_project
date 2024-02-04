@@ -45,9 +45,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
     case AppRoutes.categoriesScreen:
       return MaterialPageRoute(
-        builder: (_) => CategoriesScreen(
-          availableVendors: availableVendors,
-        ),
+        builder: (_) => CategoriesScreen(availableVendors: availableVendors),
         settings: settings,
       );
     case AppRoutes.vendorsScreen:
@@ -84,9 +82,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case AppRoutes.checkoutPage:
       final args = settings.arguments as List<CartItem>;
       return MaterialPageRoute(
-        builder: (_) => CheckoutPage(
-          cartItems: args,
-        ),
+        builder: (_) => CheckoutPage(cartItems: args),
         settings: settings,
       );
     default:

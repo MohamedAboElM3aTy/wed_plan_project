@@ -45,6 +45,12 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+
+flutter_assets:
+  assets_path: assets/images/
+  output_path: lib/core/constants/
+  filename: app_images.dart
+  field_prefix:
     
 flutter_intl:
   enabled: true

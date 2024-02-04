@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:wed_plan_project/core/extensions/context.dart';
+import 'package:wed_plan_project/core/extensions/double.dart';
 import 'package:wed_plan_project/services/auth.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/pages/sign_up/background.dart';
+import 'package:wed_plan_project/views/pages/sign_up/build_row.dart';
 import 'package:wed_plan_project/views/pages/sign_up/or_divider.dart';
 import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-import 'package:wed_plan_project/views/pages/sign_up/build_row.dart';
 
 class Body extends StatefulWidget {
   final Widget child;
@@ -26,7 +27,6 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Form(
       key: _formKey,
       child: Background(
@@ -34,16 +34,16 @@ class _BodyState extends State<Body> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'SIGN UP',
+              Text(
+                context.locale.signUp,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: size.height * 0.03),
+              10.toHeight, // ? 0.03
               Image.asset(
                 'assets/images/wed4.jpg',
-                height: size.height * 0.35,
+                height: context.screenHeight * 0.35,
               ),
               RoundedInputField(
                 changed: (value) => _email = value,
@@ -51,11 +51,11 @@ class _BodyState extends State<Body> {
                   final emailRegex = RegExp(
                       r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
                   if (value!.isEmpty || !emailRegex.hasMatch(value)) {
-                    return 'Enter a valid email';
+                    return context.locale.enterValidEmail;
                   }
                   return null;
                 },
-                hintText: 'Your Email',
+                hintText: context.locale.email,
               ),
               RoundedPasswordField(
                 onTap: (value) => _passWord = value,
@@ -71,7 +71,7 @@ class _BodyState extends State<Body> {
                             'Password must be at least 8 characters ,1 uppercase, 1 lowercase and one number'),
                       ),
                     );
-                    return 'Enter a valid Password!';
+                    return context.locale.enterValidPassword;
                   }
                   return null;
                 },
@@ -80,8 +80,8 @@ class _BodyState extends State<Body> {
                   ? CircularProgressIndicator.adaptive()
                   : RoundedButton(
                       color: Theme.of(context).primaryColor.withOpacity(0.7),
-                      text: 'SIGN UP',
-                      press: () async {
+                      text: context.locale.signUp,
+                      onPress: () async {
                         setState(() => loading = true);
                         if (_formKey.currentState!.validate()) {
                           await authBase.registerWithEmailAndPassword(
@@ -94,7 +94,7 @@ class _BodyState extends State<Body> {
                         setState(() => loading = false);
                       },
                     ),
-              SizedBox(height: size.height * 0.03),
+              10.toHeight, // ? 0.03
               AlreadyHaveAnAccountCheck(
                 login: false,
                 press: () =>

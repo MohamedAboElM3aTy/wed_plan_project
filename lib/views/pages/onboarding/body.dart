@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-
+import 'package:wed_plan_project/core/extensions/context.dart';
+import 'package:wed_plan_project/core/extensions/double.dart';
 import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
+
 import './background.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return background(
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: size.height * 0.05),
+            10.toHeight, // ? 0.05
             FittedBox(
               child: Text(
                 'Welcome to our app \n'
@@ -32,23 +33,24 @@ class Body extends StatelessWidget {
                 softWrap: true,
               ),
             ),
-            SizedBox(height: size.height * 0.03),
+            10.toHeight, // ? 0.03
             Image.asset(
               'assets/images/wedOrg.jpeg',
-              width: size.width * 1,
-              height: size.height * 0.45,
+              width: context.screenWidth * 1,
+              height: context.screenHeight * 0.45,
             ),
-            SizedBox(height: size.height * 0.05),
+            10.toHeight, // ? 0.05
             RoundedButton(
               color: Theme.of(context).primaryColor,
-              text: 'LOGIN',
-              press: () => Navigator.of(context).pushNamed(AppRoutes.loginPage),
+              text: context.locale.login,
+              onPress: () => context.navigator.pushNamed(AppRoutes.loginPage),
             ),
             RoundedButton(
               color: Theme.of(context).primaryColor.withOpacity(0.7),
-              text: 'SIGN UP',
-              press: () =>
-                  Navigator.of(context).pushNamed(AppRoutes.signUpScreen),
+              text: context.locale.signUp,
+              // onPress: () =>
+              onPress: () =>
+                  context.navigator.pushNamed(AppRoutes.signUpScreen),
             ),
           ],
         ),

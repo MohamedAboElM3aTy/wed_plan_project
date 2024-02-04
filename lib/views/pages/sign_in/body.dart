@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:wed_plan_project/core/extensions/double.dart';
 import 'package:wed_plan_project/services/auth.dart';
+import 'package:wed_plan_project/utilities/routes.dart';
 import 'package:wed_plan_project/views/widgets/have_account.dart';
 import 'package:wed_plan_project/views/widgets/rounded_button.dart';
 import 'package:wed_plan_project/views/widgets/rounded_inputField.dart';
 import 'package:wed_plan_project/views/widgets/rounded_passwordField.dart';
-import 'package:wed_plan_project/utilities/routes.dart';
+
 import './background.dart';
 
 class Body extends StatefulWidget {
@@ -35,12 +36,12 @@ class _BodyState extends State<Body> {
                 'LOGIN',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),
-              SizedBox(height: size.height * 0.03),
+              10.toHeight, // ? 0.03
               Image.asset(
                 'assets/images/290027.png',
                 height: size.height * 0.35,
               ),
-              SizedBox(height: size.height * 0.03),
+              10.toHeight, // ? 0.03
               RoundedInputField(
                 changed: (value) => _email = value,
                 validator: (value) {
@@ -71,7 +72,7 @@ class _BodyState extends State<Body> {
                   : RoundedButton(
                       color: Theme.of(context).primaryColor,
                       text: 'LOGIN',
-                      press: () async {
+                      onPress: () async {
                         setState(() => loading = true);
                         if (_formKey.currentState!.validate()) {
                           final isEmailExists =
@@ -99,7 +100,7 @@ class _BodyState extends State<Body> {
                         setState(() => loading = false);
                       },
                     ),
-              SizedBox(height: size.height * 0.03),
+              10.toHeight, // ? 0.03
               AlreadyHaveAnAccountCheck(
                 press: () =>
                     Navigator.of(context).pushNamed(AppRoutes.signUpScreen),

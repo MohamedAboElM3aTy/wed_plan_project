@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wed_plan_project/generated/l10n.dart';
 import 'package:wed_plan_project/utilities/constants.dart';
 import './text_field_container.dart';
 
@@ -34,7 +35,7 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
         textInputAction: TextInputAction.done,
         obscureText: _isObscure,
         decoration: InputDecoration(
-          hintText: 'Password',
+          hintText: S.of(context).password,
           icon: Icon(
             Icons.lock,
             color: kColorScheme.primary,

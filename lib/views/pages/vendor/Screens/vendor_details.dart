@@ -37,6 +37,13 @@ class _VendorsDetailsState extends State<VendorsDetails> {
   }
 
   @override
+  void dispose() {
+    _favoriteBloc.close();
+    _cartBloc.close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final themes = Theme.of(context).textTheme;
     final snackBar = ScaffoldMessenger.of(context);

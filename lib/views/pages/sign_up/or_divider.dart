@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
+import 'package:wed_plan_project/core/extensions/context.dart';
+import 'package:wed_plan_project/generated/l10n.dart';
+
 class OrDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
+      width: context.screenWidth * 0.8,
       child: Row(
         children: [
           buildDivider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child:  Text(
-              'OR',
+              S.of(context).or,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.secondary,
                 fontWeight: FontWeight.w600,

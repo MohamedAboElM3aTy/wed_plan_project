@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wed_plan_project/generated/l10n.dart';
 
 import 'package:wed_plan_project/utilities/constants.dart';
 
@@ -13,6 +14,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = S.of(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -23,7 +25,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
         InkWell(
           onTap: press,
           child: Text(
-            login ? ' Sign Up' : ' Sign In',
+            login ? locale.signUp : locale.login,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kColorScheme.primary,
